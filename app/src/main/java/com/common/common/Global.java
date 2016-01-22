@@ -1,0 +1,64 @@
+package com.common.common;
+
+import android.content.Context;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+
+import com.common.application.XYApplication;
+
+/**
+ * Created by 黄笠 on 2016/1/22.
+ */
+public class Global {
+    private static final String TAG = "Global";
+
+    private static Looper mLooper;
+    private static Handler mHandler;
+
+    private static Handler uiHandler;
+
+    //application上下文
+    public static Context mContext;
+
+
+    static{
+        HandlerThread mThread = new HandlerThread("Global");
+        mThread.start();
+        mLooper = mThread.getLooper();
+        mHandler = new Handler(mLooper);
+        //init uiHandler
+        uiHandler = new Handler(Looper.getMainLooper());
+    }
+
+    /***
+     * 非UI线程调用耗时操作
+     * @param r
+     */
+    public static final void postDelay(Runnable r){
+        mHandler.post(r);
+    }
+
+    /***
+     * 获取全局变量
+     * @return
+     */
+    public static Context getContext(){
+        mContext = XYApplication.getInstance().getApplicationContext();
+        return mContext;
+    }
+
+    /***
+     * Runnable post到主线程
+     * @param r
+     */
+    public static final void postRunnable2UI(Runnable r){
+        uiHandler.post(r);
+    }
+
+
+    public void removeRunnale(Runnable r){
+        uiHandler.removeCallbacks(r);
+        mHandler.removeCallbacks(r);
+    }
+}
