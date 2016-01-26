@@ -117,4 +117,6 @@ public class XYConfig {
     public static String getTradeNo() {
         return WXPAY_TRADENO;
     }
+    //评论页每一页请求的数量
+    public static final  int COMMENT_SIZE = 20;
 }

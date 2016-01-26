@@ -1,11 +1,15 @@
 package com.common.common;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 
 import com.common.application.XYApplication;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 黄笠 on 2016/1/22.
@@ -20,6 +24,7 @@ public class Global {
 
     //application上下文
     public static Context mContext;
+
 
 
     static{
@@ -44,7 +49,7 @@ public class Global {
      * @return
      */
     public static Context getContext(){
-        mContext = XYApplication.getInstance().getApplicationContext();
+
         return mContext;
     }
 
@@ -61,4 +66,8 @@ public class Global {
         uiHandler.removeCallbacks(r);
         mHandler.removeCallbacks(r);
     }
+    public static void  init(){
+        //全局的一些变量的初始化
+    }
+
 }
