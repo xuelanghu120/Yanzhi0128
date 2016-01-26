@@ -1,6 +1,5 @@
-package com.xingyun.login;
+package com.xingyun.login.reqparam;
 
-import com.common.common.XYConfig;
 import com.common.http.YanZhiUrlBuilder;
 
 import main.mmwork.com.mmworklib.http.builder.ParamEntity;

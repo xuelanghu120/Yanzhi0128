@@ -1,8 +1,7 @@
-package com.xingyun.login;
+package com.xingyun.login.manager;
 
-//import com.xingyun.login.Entity.model.entity.User;
-
-import java.util.Observable;
+import com.xingyun.login.reqparam.ReqLoginParam;
+import com.xingyun.login.rsp.RspLogin;
 
 import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
 import rx.functions.Action1;
@@ -25,10 +24,10 @@ public class LoginDataCenterManager {
     }
 
     public String login(ReqLoginParam param, final NetworkCallback callback){
-        LoginNerManager.reqLogin(param, false, callback).subscribe(new Action1<RspLogin>() {
+        LoginNetManager.reqLogin(param, false, callback).subscribe(new Action1<RspLogin>() {
             @Override
             public void call(RspLogin o) {
-                if (o.isSuccess){
+                    if (o.isSuccess){
                     user = o.user;
                 }
             }

@@ -1,21 +1,17 @@
 package com.common.application;
 
 import android.app.Activity;
-import android.app.Application;
 import android.support.multidex.MultiDexApplication;
 
 import com.common.common.Global;
-import com.common.utils.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.BlockingDeque;
 
 /**
  * Created by 黄笠 on 2016/1/22.
  */
-//public class XYApplication extends MultiDexApplication {
-public class XYApplication extends Application {
+public class XYApplication extends MultiDexApplication {
 
     public static final String TAG = XYApplication.class.getSimpleName();
 

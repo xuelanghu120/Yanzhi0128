@@ -1,4 +1,4 @@
-package com.xingyun.login;
+package com.xingyun.login.rsp;
 
 import android.text.TextUtils;
 

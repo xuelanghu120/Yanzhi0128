@@ -1,15 +1,9 @@
 package com.common.common;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
-
-import com.common.application.XYApplication;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by 黄笠 on 2016/1/22.
