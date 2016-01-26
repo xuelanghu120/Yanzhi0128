@@ -44,7 +44,6 @@ public class XYApplication extends Application {
         //子线程或者使用rxjava执行
     }
 
-
     public void addActivity(Activity activity){
         mActivities.add(activity);
     }
