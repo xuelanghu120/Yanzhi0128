@@ -30,7 +30,6 @@ public class XYApplication extends MultiDexApplication {
         Global.mContext =this.getApplicationContext();
         Global.init();
         startServices();
-
     }
 
     /**
@@ -43,9 +42,11 @@ public class XYApplication extends MultiDexApplication {
     public void addActivity(Activity activity){
         mActivities.add(activity);
     }
+
     public void removeActivity(Activity activity){
         mActivities.remove(activity);
     }
+
     //app安全退出时使用
     public void clearActivities(){
         mActivities.clear();

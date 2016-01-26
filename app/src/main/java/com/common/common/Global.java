@@ -9,17 +9,14 @@ import android.os.Looper;
  * Created by 黄笠 on 2016/1/22.
  */
 public class Global {
+
     private static final String TAG = "Global";
 
     private static Looper mLooper;
     private static Handler mHandler;
-
     private static Handler uiHandler;
-
     //application上下文
     public static Context mContext;
-
-
 
     static{
         HandlerThread mThread = new HandlerThread("Global");
@@ -28,6 +25,21 @@ public class Global {
         mHandler = new Handler(mLooper);
         //init uiHandler
         uiHandler = new Handler(Looper.getMainLooper());
+    }
+
+    /**
+     * 全局的一些变量的初始化
+     */
+    public static void  init(){
+
+    }
+
+    /***
+     * 获取全局变量
+     * @return
+     */
+    public static Context getContext(){
+        return mContext;
     }
 
     /***
@@ -39,15 +51,6 @@ public class Global {
     }
 
     /***
-     * 获取全局变量
-     * @return
-     */
-    public static Context getContext(){
-
-        return mContext;
-    }
-
-    /***
      * Runnable post到主线程
      * @param r
      */
@@ -55,13 +58,9 @@ public class Global {
         uiHandler.post(r);
     }
 
-
     public void removeRunnale(Runnable r){
         uiHandler.removeCallbacks(r);
         mHandler.removeCallbacks(r);
-    }
-    public static void  init(){
-        //全局的一些变量的初始化
     }
 
 }

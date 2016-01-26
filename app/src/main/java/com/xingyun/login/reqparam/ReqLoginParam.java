@@ -22,7 +22,7 @@ public class ReqLoginParam implements ParamEntity {
     /**
      * 过期时间戳
      */
-    String expires;
+    public String expires;
     /**
      * RefreshToken
      */

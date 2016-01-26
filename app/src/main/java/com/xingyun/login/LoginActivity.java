@@ -1,10 +1,10 @@
 package com.xingyun.login;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.common.base.activity.BaseActivity;
 import com.xingyun.login.manager.LoginDataCenterManager;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.rsp.RspLogin;
@@ -15,10 +15,20 @@ import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
 /**
  * Created by 黄笠 on 2016/1/22.
  */
-public class LoginActivity extends Activity implements View.OnClickListener,NetworkCallback<RspLogin> {
+public class LoginActivity extends BaseActivity implements View.OnClickListener,NetworkCallback<RspLogin> {
 
     private TextView textViewTelephone;
     private TextView textViewPwd;
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void init() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
