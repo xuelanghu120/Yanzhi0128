@@ -1,6 +1,7 @@
 package com.common.base.fragment;
 
 import android.content.Context;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+
+import com.common.utils.Logger;
 
 import java.lang.reflect.Field;
 
@@ -26,29 +29,71 @@ public abstract class BaseFragment extends Fragment {
 
     public abstract int getLayoutId();
 
-    protected void initTitle() {
-    }
+    public abstract void init(Bundle savedInstanceState);
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        context = getActivity();
-    }
+    public abstract void createView(LayoutInflater inflater, ViewGroup container, View parentView, Bundle savedInstanceState);
+
+    protected void initTitle() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        parentView = initView(inflater);
+        try {
+            Logger.d(TAG, "onCreateView");
+
+            // 设置可以弹出菜单
+            setHasOptionsMenu(true);
+
+            if (parentView == null) {
+                parentView = inflater.inflate(getLayoutId(), container, false);
+                createView(inflater, container, parentView, savedInstanceState);
+            }
+
+            ViewGroup rootView = (ViewGroup) parentView.getParent();
+            if (rootView != null) {
+                rootView.removeView(parentView);
+            }
+
+            mInputMethodManager = (InputMethodManager) getActivity().getSystemService(
+                    Context.INPUT_METHOD_SERVICE);
+        } catch (Exception e) {
+            Logger.e(TAG, "onCreateView", e);
+        }
         return parentView;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        initData(savedInstanceState);
         super.onActivityCreated(savedInstanceState);
+        fragmentManager = getFragmentManager();
+        context = getActivity();
+        initTitle();
+        init(savedInstanceState);
     }
 
-    protected abstract void initData(Bundle savedInstanceState);
-    protected abstract View initView(LayoutInflater inflater);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 
     @Override
     public void onDetach() {

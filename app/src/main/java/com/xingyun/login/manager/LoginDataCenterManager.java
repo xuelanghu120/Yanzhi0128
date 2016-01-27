@@ -1,7 +1,5 @@
 package com.xingyun.login.manager;
 
-import android.databinding.Observable;
-
 import com.xingyun.login.entity.User;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.rsp.RspLogin;
@@ -27,7 +25,7 @@ public class LoginDataCenterManager {
     }
 
 
-    public Observable login(ReqLoginParam param, final NetworkCallback callback){
+    public User login(ReqLoginParam param, final NetworkCallback callback){
         LoginNetManager.reqLogin(param, false, callback).subscribe(new Action1<RspLogin>() {
             @Override
             public void call(RspLogin o) {
