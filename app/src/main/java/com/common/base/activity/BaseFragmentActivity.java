@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -18,7 +19,7 @@ import com.common.utils.Logger;
 /**
  * Created by 黄笠 on 2016/1/23.
  */
-public abstract class BaseFragmentActivity extends FragmentActivity {
+public abstract class BaseFragmentActivity extends AppCompatActivity {
 
     private static final String TAG = "BaseFragmentActivity";
 
