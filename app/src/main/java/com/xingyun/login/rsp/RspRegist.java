@@ -12,8 +12,15 @@ import org.json.JSONObject;
 public class RspRegist extends YanzhiAbstractResponser {
 
     public ResultData<Integer> result;
+
+
     @Override
     public void parserResult(JSONObject jsonObject, Gson gson) {
+        result = gson.fromJson(jsonObject.toString(),result.getClass());
+    }
 
+    @Override
+    public String getErrorDesc(int errorCode) {
+        return super.getErrorDesc(errorCode);
     }
 }
