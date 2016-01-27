@@ -51,6 +51,4 @@ public abstract class BaseActivity extends Activity{
         super.onDestroy();
         XYApplication.getInstance().removeActivity(this);
     }
-
-
 }

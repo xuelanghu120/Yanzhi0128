@@ -22,11 +22,11 @@ public class XYConfig {
     private static final String[] XY_MY_LEVEL_URL_ARRAY = {"http://www.branch.xingyun.cn/html/app/level_page.html?", "http://www.trunk.xingyun.cn/html/app/level_page.html?", "http://www.xingyun.cn/html/app/level_page.html?"};
     private static final String[] XY_MY_SCORE_URL_ARRAY = {"http://www.branch.xingyun.cn/u/user_id/yanzhi", "http://www.trunk.xingyun.cn/u/user_id/yanzhi", "http://www.xingyun.cn/u/user_id/yanzhi"};
 
-    public static final boolean IS_DEBUG = false;
+    public static final boolean IS_DEBUG = true;
     //json调试是否打开
-    public static final boolean IS_JSON_DEBUG = false;
+    public static final boolean IS_JSON_DEBUG = true;
     //登陆token日志跟踪开关
-    public static final boolean IS_DEBUG_LOGFILE = false;
+    public static final boolean IS_DEBUG_LOGFILE = true;
 
     private static final boolean TEST_MODE = false;
     public static final String TEST_ACCOUNT = "13466608793";
