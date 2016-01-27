@@ -2,7 +2,7 @@ package com.xingyun.login.rsp;
 
 import com.common.http.YanzhiAbstractResponser;
 import com.google.gson.Gson;
-import com.xingyun.login.entity.User;
+import com.xingyun.login.model.entity.User;
 import org.json.JSONObject;
 
 /**

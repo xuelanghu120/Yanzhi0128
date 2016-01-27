@@ -19,7 +19,7 @@ import com.common.utils.Logger;
 /**
  * Created by 黄笠 on 2016/1/23.
  */
-public abstract class BaseFragmentActivity extends AppCompatActivity {
+public abstract class BaseFragmentActivity extends FragmentActivity {
 
     private static final String TAG = "BaseFragmentActivity";
 

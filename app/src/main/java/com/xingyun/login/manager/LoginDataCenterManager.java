@@ -1,6 +1,6 @@
 package com.xingyun.login.manager;
 
-import com.xingyun.login.entity.User;
+import com.xingyun.login.model.entity.User;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.rsp.RspLogin;
 

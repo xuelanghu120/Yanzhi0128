@@ -1,3 +1,1099 @@
 <resources>
     <string name="app_name">颜值</string>
+    <string name="action_settings">Settings</string>
+    <string name="image_desc">None</string>
+    <string name="star_home">home</string>
+    <string name="super_star">明星</string>
+    <string name="new_star">新星</string>
+    <string name="star_publish">publish</string>
+    <string name="star_message">消息</string>
+    <string name="star_friend">星友</string>
+    <string name="star_find">更多</string>
+    <string name="myself">我</string>
+    <string name="star_myself">myself</string>
+    <string name="setting_string">设置</string>
+    <string name="no_sdcard">无存储卡,请插入存储卡后再试</string>
+    <string name="get_gps_data">正在获取位置信息···</string>
+    <string name="search_hint">可按姓名/拼音搜索</string>
+    <string name="search_user">搜索颜值用户</string>
+    <string name="search_name_number">搜名字/颜值号</string>
+    <string name="friends">星友</string>
+    <string name="timeline">星友圈</string>
+    <string name="start_discover">discover</string>
+    <string name="nothing_data">暂时没有相关内容</string>
+    <string name="in_bottom">没有更多了...</string>
+    <string name="hot_chosen">精选</string>
+    <string name="highlight">精选</string>
+    <string name="square">广场</string>
+    <string name="login_text_wemeet">登陆颜值，更多明星等你见面</string>
+    <string name="search_friends">搜索好友</string>
+    <string name="search_fans">搜索关注者</string>
+    <string name="search_follow">搜索关注</string>
+    <string name="search_mutuals">在共同好友中搜索</string>
+    <string name="follow_tips">确认全部关注？</string>
+    <string name="this_week">本周</string>
+    <string name="next_week">上周</string>
+    <string name="that_week">当周</string>
+    <string name="negative_score">负分</string>
+
+    <!-- main -->
+    <string name="title_recommend">推荐</string>
+    <string name="title_famous_star">明星</string>
+    <string name="title_new_star">新星</string>
+    <string name="title_star">星星</string>
+    <string name="title_highlight">精华</string>
+    <string name="all">全部</string>
+
+    <!-- publish -->
+    <string name="send_news_string">发布动态</string>
+    <string name="publishcommon_string">发布</string>
+    <string name="publish_news_string">发动态</string>
+    <string name="publish_show_string">发展示</string>
+    <string name="publish_tip_string">动态可以发布图片/文字。</string>
+    <string name="publish_text_hint_string">写点什么吧</string>
+    <string name="publish_show_text_hint_string">展示标题</string>
+    <string name="add_voice_string">添加语音</string>
+    <string name="add_pic_string">可添加图片(最多9张)</string>
+    <string name="add_pic_desc_string">被推荐时，默认第一张图为封面</string>
+    <string name="add_video_string">可添加视频(最大3MB)</string>
+    <string name="add_video_desc_string">如有视频，被推荐时默认视频截图为封面</string>
+    <string name="add_experience_string">可添加体验地点</string>
+    <string name="add_video_tmp_string">上传视频（即将开启）</string>
+    <string name="location_on_string">开启定位不会显示你的位置，因为我们只想让距离产生美~</string>
+    <string name="location_off_string">关闭定位后，附近的人将无法看到你将要发布的这个内容。</string>
+    <string name="publish_show_tip">展示可发布较为专业的内容，便于别人了解。</string>
+    <string name="publish_show_title_tip_string">标题（必填）</string>
+    <string name="publish_cover_string">设置封面（必填）</string>
+    <string name="publish_show_text_tip_string">正文</string>
+    <string name="video_link_hint_string">视频链接</string>
+    <string name="video_link_tip_string">支持优酷网/新浪视频/土豆网/56网/音悦台/酷6网的视频播放页链接</string>
+    <string name="show_group_string">展示分组</string>
+    <string name="manage_group">管理分组</string>
+    <string name="default_group">默认分组</string>
+    <string name="add_group">添加分组</string>
+    <string name="publish_choose_video_album">视频</string>
+    <string name="zans_title">支持过的人（%1$s）</string>
+    <string name="send_loading">正在发送%1$s</string>
+    <string name="send_loading_2">正在发送</string>
+    <string name="send_dynamic_fail">发送动态失败</string>
+    <string name="send_show_success">发送展示成功</string>
+    <string name="send_show_fail">发送展示失败</string>
+    <string name="send_fail">发送失败</string>
+    <string name="title_not_null">标题不能为空</string>
+    <string name="content_not_null">内容不能为空</string>
+    <string name="loading">正在获取数据&#8230;</string>
+    <string name="select_photo_title">选择照片</string>
+    <string name="send_dynamic_success">发送动态成功</string>
+    <string name="send_dynamic_loading">正在发送动态</string>
+    <string name="send_show_loading">正在发送展示</string>
+    <string name="publish_send_loading">正在发布</string>
+    <string name="publish_success">发布成功</string>
+    <string name="publish_success_wait">\n 发布成功！等待审核&#8230; \n</string>
+    <string name="publish_upload_fail">上传失败</string>
+    <string name="publish_dynamic_fail">发送失败</string>
+    <string name="publish_preview_delete_confirm">确认删除吗？</string>
+    <string name="publish_choosed_video_confirm">发送该视频？</string>
+    <string name="publish_sync_3rd_platform">同步到：</string>
+    <string name="publish_location">开启定位</string>
+    <string name="reciver_mark_title">收到的打分</string>
+    <string name="publish_jump_over">跳过</string>
+
+    <!-- register && login -->
+    <string name="xy_register">注册</string>
+    <string name="xy_copyright">COPYRIGHT©2014 XINGYUN NETWORK CO.ALL RIGHTS RESERVED.</string>
+    <string name="sina_login">微博登录</string>
+    <string name="weixin_login">微信登录</string>
+    <string name="login">登录</string>
+    <string name="to_setting">去设置</string>
+    <string name="login_again">请重新登录</string>
+    <string name="login_again_have_error">很抱歉，出现意料之外的问题，请重新登录</string>
+    <string name="login_from_sina">登录新浪帐号</string>
+    <string name="login_from_mobile">手机登录</string>
+    <string name="login_login">登录</string>
+    <string name="register_loading">正在注册&#8230;</string>
+    <string name="register_check_verify_code">正在校验验证码&#8230;</string>
+    <string name="register_choose_gender">请选择性别</string>
+    <string name="register_choose_avatar">设置头像</string>
+    <string name="register_recomment_follow_title">推荐关注</string>
+    <string name="register_recomment_follow">推荐关注全部</string>
+    <string name="register_mobile_tip">提示：注册新帐号无法与原微博登录帐号关联</string>
+    <string name="password_tip">请输入6&#8211;16位数字，字母或常用字符。\n字母区分大小写</string>
+    <string name="password_tip2">请输入6&#8211;16位数字，字母密码。</string>
+    <string name="agree_register">注册并同意</string>
+    <string name="xingyun_agreement">颜值用户协议</string>
+    <string name="please_input_mobile">输入手机号码</string>
+    <string name="please_input_password">输入登录密码</string>
+    <string name="ensure_mobile_number">确认手机号码</string>
+    <string name="join_to_xingyun_1s">只要几秒就可以轻松加入颜值</string>
+    <string name="intpu_email">填写邮箱</string>
+    <string name="intpu_nickname">填写昵称</string>
+    <string name="intpu_your_email">填写你的邮箱</string>
+    <string name="intpu_your_email_tips">留下你的邮箱，颜值APP福利发给你</string>
+    <string name="email_illegal">邮箱不合法</string>
+    <string name="set_input_nick">正在设置昵称</string>
+    <string name="ensure_mobile_number_tip">我们即将发送验证码短信到这个号码</string>
+    <string name="next_step">下一步</string>
+    <string name="please_set_password">设置密码</string>
+    <string name="forgotten_password">忘记密码</string>
+    <string name="reset_password">重置密码</string>
+    <string name="again_input">再输入一次</string>
+    <string name="new_password">新密码</string>
+    <string name="old_password">旧密码</string>
+    <string name="verify_password">确认密码</string>
+    <string name="forgotten_old_password">忘记旧密码?</string>
+    <string name="please_verification_code">请输入验证码</string>
+    <string name="input_verification_code">输入验证码</string>
+    <string name="renew_request_verification_code">%1$s秒后重新获取验证码</string>
+    <string name="renew_request_verification_code_2">重新获取验证码</string>
+    <string name="verification_code_can_not_be_null">验证码不能为空</string>
+    <string name="register_failed">注册失败</string>
+    <string name="verification_failed">验证失败</string>
+    <string name="login_failed">登录失败</string>
+    <string name="use_otherway_login">使用第三方账号登录</string>
+    <string name="login_way_tips">建议高颜值和新浪认证用户使用微博登录\r\n有助于成为[颜值会员]</string>
+    <string name="weixin_login_tips">若曾用手机号或微博登录，请先登录然后再绑定微信，以免产生两个账号</string>
+
+    <!-- star_main -->
+    <string name="star_community_string">星友圈</string>
+    <string name="star_we_meet">星约见</string>
+    <string name="star_show_string">星秀</string>
+    <string name="star_host_string">星主</string>
+    <string name="star_apply_string">申请</string>
+    <string name="v_string">V</string>
+    <string name="s_string">S</string>
+    <string name="personal_dynamic">详情</string>
+    <string name="billboard_found_text">自制</string>
+    <string name="billboard_channel_text">频道</string>
+
+    <string name="man_face">男颜</string>
+    <string name="woman_face">女颜</string>
+    <string name="nearby_face">附近</string>
+    <string name="rank">榜单</string>
+
+    <!-- receiver score -->
+    <string name="my_face">我的颜值</string>
+    <string name="call_other_to_score">叫朋友来颜值打分</string>
+    <string name="lets_other_to_score">拉人帮他打分</string>
+    <string name="lets_other_to_score_she">拉人帮她打分</string>
+    <string name="score_rule">打分规则</string>
+
+    <!-- xing xing -->
+    <string name="star_billboard">星榜</string>
+    <string name="star_cooperation">星合作</string>
+    <string name="date">星约见</string>
+    <string name="xing_xing_famous_star_billboard">女颜榜</string>
+    <string name="xing_xing_new_star_billboard">男颜榜</string>
+    <string name="xing_xing_star_billboard">明星榜</string>
+    <string name="famous_star_title">名人堂</string>
+    <string name="new_join_title">推荐精英</string>
+    <string name="star_cooperate_title">星合作</string>
+    <string name="star_opportunity_title">星机遇</string>
+    <string name="vip_priority_title">会员尊享</string>
+    <string name="xingyun_vip_priority_title">颜值折扣</string>
+
+    <!-- friends	activity -->
+    <string name="fans_string">关注者</string>
+    <string name="follow_string">关注</string>
+    <string name="follow_all">全关注</string>
+    <string name="mutuals_string">共同好友</string>
+    <string name="hot_new">推荐</string>
+    <string name="hot_rank">热门</string>
+    <string name="hot_channel">颜值</string>
+    <string name="find_string">发现</string>
+    <string name="each_other_follow_string">相互关注</string>
+    <string name="may_know_people_string">可能认识</string>
+    <string name="app_recommend_string">精品应用</string>
+    <string name="group_string">群聊</string>
+    <string name="ta_friend_string">Ta的朋友</string>
+    <string name="professional_vip_function">专业会员功能</string>
+    <string name="industry_string">行业</string>
+    <string name="area_string">地区</string>
+    <string name="face_topic">颜值专题</string>
+    <string name="publish_topic">参与</string>
+
+    <!-- Supporters activity -->
+    <string name="supporters_string_title">支持Ta的人</string>
+
+    <!-- find activity -->
+    <string name="cooperation_star_line">星友圈</string>
+    <string name="cooperation_string">合作</string>
+    <string name="yes_or_no">YES/NO</string>
+    <string name="new_join">新颜推荐</string>
+    <string name="created_by_xingyun">官方自制</string>
+    <string name="add_friend_string">添加朋友</string>
+    <string name="face_how_old">颜值测试</string>
+    <string name="beauty_face_recommend">美颜推荐</string>
+    <string name="new_face_recommend">新颜推荐</string>
+    <string name="city_nearby">同城身边</string>
+    <string name="face_rank">颜值榜单</string>
+    <string name="friends_of_friends_string">朋友的朋友</string>
+    <string name="chance_string">机遇</string>
+    <string name="rank_string">排行榜</string>
+    <string name="essence_service">精英服务</string>
+    <string name="famous_people">名人堂</string>
+    <string name="input_xy_number_hint">输入对方颜值号，即可找到对方。</string>
+    <string name="add_friend_tip">如果你通讯录中的朋友注册颜值系统会通知你</string>
+    <string name="rencaiku">专业人才库</string>
+
+    <!-- contacts -->
+    <string name="contact_string">通讯录</string>
+    <string name="turn_on_contacts_match">启用通讯录</string>
+    <string name="no_turn_on">未启用</string>
+    <string name="turn_on">已启用</string>
+    <string name="contact_list_info_string">启用通讯录，系统会快速容易找到通讯录中的朋友。不保存通讯录中的任何资料，仅使用号码匹配识别,请放心使用</string>
+    <string name="contact_list_turn_on_tip">通过此功能查找好友，还有机会获得颜值新年万元大奖！（推荐参与）</string>
+
+    <!-- myself -->
+    <string name="discussion_string">评论</string>
+    <string name="recommend_string">推荐</string>
+    <string name="system_string">通知</string>
+    <string name="draft_string">草稿箱</string>
+    <string name="collection_string">收藏</string>
+    <string name="star_membership_string">颜值会员</string>
+    <string name="star_membership_string_2">颜值会员</string>
+    <string name="membership_string">星达人</string>
+    <string name="recommend_mine_string">推荐我的</string>
+    <string name="comment_mine_string">我的评论</string>
+    <string name="comment_rencai_string">颜值人才库Base | 颜值网 XINGYUN.CN</string>
+    <string name="myself_maybeknow">可能认识</string>
+    <string name="myself_group">多人对话组</string>
+    <string name="myself_invite">邀请朋友加入</string>
+    <string name="myself_help">帮助</string>
+    <string name="myself_contacts_us">联系我们</string>
+    <string name="myself_yanzhi_help">颜值小助手</string>
+    <string name="myself_setting">设置</string>
+    <string name="face_score">颜值打分</string>
+    <string name="face_score_all">所有打分</string>
+    <string name="myself_income">我的收益</string>
+    <string name="myself_rank">我的等级</string>
+    <string name="myself_face_score">颜值分数</string>
+    <string name="psersonal_level">个人等级</string>
+    <string name="myself_experience">想去和去过</string>
+    <string name="no_level">暂无等级</string>
+    <string name="myself_help_url">http://www.xingyun.cn/help</string>
+    <string name="contact_business_bd">http://www.xingyun.cn/html/app/bd.html</string>
+    <string name="contact_join_us">http://www.xingyun.cn/app/joinus</string>
+    <string name="contact_media_bd">http://www.xingyun.cn/app/media</string>
+    <string name="message_newfans">新增粉丝</string>
+    <string name="invite_sharehomepage">分享个人主页</string>
+
+    <!-- input -->
+    <string name="input_number_count_limit">你输入的字数已经超过了限制</string>
+    <string name="input_skill_count_limit">最多可设置12个标签</string>
+    <string name="input_trades_count_limit">最多只能选择6个行业</string>
+
+    <!-- common -->
+    <string name="common_ok">确定</string>
+    <string name="common_update">升级</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_cancel_2">放弃</string>
+    <string name="common_clear">清空</string>
+    <string name="common_yes">是</string>
+    <string name="common_no">否</string>
+    <string name="common_option">选项</string>
+    <string name="common_choice">选择</string>
+    <string name="common_search">搜索</string>
+    <string name="common_add">添加</string>
+    <string name="common_added">已添加</string>
+    <string name="common_delete">删除</string>
+    <string name="common_send">发送</string>
+    <string name="common_collect">收藏</string>
+    <string name="common_done">完成</string>
+    <string name="common_save">保存</string>
+    <string name="common_prompt">提示</string>
+    <string name="common_copy">复制</string>
+    <string name="common_paste">粘贴</string>
+    <string name="common_sort">排序</string>
+    <string name="common_sorted">已排序</string>
+    <string name="common_edit">编辑</string>
+    <string name="common_create_new">新建</string>
+    <string name="common_invite">邀请</string>
+    <string name="common_ahead">继续</string>
+    <string name="common_quit">退出</string>
+    <string name="common_quit_app">再按一次退出颜值</string>
+    <string name="common_disband">解散</string>
+    <string name="common_call_voip">VoIP通话</string>
+    <string name="common_create">创建</string>
+    <string name="common_exit">退出</string>
+    <string name="common_retry">重试</string>
+    <string name="common_logon">登录</string>
+    <string name="common_notify">通知</string>
+    <string name="common_back">返回</string>
+    <string name="common_zero">0</string>
+    <string name="common_verified">认证：</string>
+    <string name="common_verified_prefix">认证：%1$s</string>
+    <string name="common_bind_fail">绑定新浪微博失败</string>
+    <string name="common_bind_success">绑定新浪微博成功</string>
+    <string name="common_bind_wechat_fail">绑定微信失败</string>
+    <string name="common_befollowed">人关注</string>
+    <string name="common_giveup">是否放弃</string>
+    <string name="common_failed">加载失败，请重试</string>
+    <string name="no_binding">未绑定该手机！</string>
+    <string name="common_failed_click_try">加载失败，点击重试</string>
+    <string name="common_loading">载入中&#8230;</string>
+    <string name="common_exit_hint">再点一次退出！</string>
+    <string name="common_manager_group">管理分组</string>
+    <string name="common_manager_group_success">管理分组</string>
+    <string name="common_create_group">新建分组</string>
+    <string name="common_create_group_doing">正在新建分组&#8230;</string>
+    <string name="common_delete_group_doing">正在删除分组&#8230;</string>
+    <string name="common_update_group_doing">正在修改分组&#8230;</string>
+    <string name="common_update_group_fail">修改分组失败</string>
+    <string name="common_create_group_fail">新增分组失败</string>
+    <string name="common_delete_group_fail">删除分组失败</string>
+    <string name="common_group_name">分组名字</string>
+    <string name="common_edit_group">编辑分组</string>
+    <string name="common_group_max_size_8">最多只能创建8个分组</string>
+    <string name="common_share">分享</string>
+    <string name="common_custom_archive">自定义档案</string>
+    <string name="common_update_time">上次更新:%1$s</string>
+    <string name="current_namespace">http://www.xingyun.cn</string>
+    <string name="common_share_to">分享到</string>
+    <string name="common_switch_on">开</string>
+    <string name="common_switch_off">关</string>
+    <string name="common_operation">操作</string>
+    <string name="common_preview">预览</string>
+    <string name="common_choose_local_album">选择本地相册</string>
+    <string name="common_details">详情</string>
+    <string name="common_sina_weibo">新浪微博</string>
+    <string name="common_friend_circle">朋友圈</string>
+    <string name="common_xy_title_logo">颜值-中国全明星APP</string>
+    <string name="common_contact_xingyun">联系颜值</string>
+    <string name="common_gif">GIF</string>
+    <string name="common_all">全部</string>
+    <string name="common_all_city">全国</string>
+    <string name="common_hot_recommend">热门推荐</string>
+    <string name="common_publish_comment">发表评论</string>
+    <string name="common_publish_comment_2">评论</string>
+    <string name="common_hot_comment">热门评论</string>
+    <string name="common_new_comment">最新评论</string>
+    <string name="common_count_comment">%1$s条评论</string>
+    <string name="common_view_more">浏览更多></string>
+    <string name="common_zai">在</string>
+    <string name="common_zai_fans">个粉丝中搜索</string>
+    <string name="common_zai_friends">个好友中搜索</string>
+    <string name="common_zai_care">个关注中搜索</string>
+    <string name="common_total_fans">总粉丝 %1$s 人</string>
+    <string name="common_week_new_fans">本周新增 %1$s 人</string>
+    <string name="common_month_new_fans">本月新增 %1$s 人</string>
+    <string name="common_relate_user">相关人标签</string>
+    <string name="common_relate_tags">相关标签</string>
+    <string name="gradecount_xingyun">人打分</string>
+    <string name="common_score_dec">我给：%1$s 分</string>
+    <string name="common_score_num">共 %1$s 人打分</string>
+    <string name="common_score_num_week">本周 %1$s 人打分</string>
+    <string name="common_handle_success">操作成功</string>
+    <string name="common_choose_operation">选择操作</string>
+    <string name="common_baidu_map">百度地图</string>
+    <string name="common_gaode_map">高德地图</string>
+    <string name="common_choose_type">选择方式</string>
+    <string name="common_my_location">我的位置</string>
+    <string name="common_location_fail">获取当前位置失败</string>
+    <string name="common_downloading_app">正在下载</string>
+    <string name="common_downloading_app_2">正在下载%1$s</string>
+
+
+    <!-- scoreDetail -->
+    <string name="slide_score">滑动打分</string>
+    <string name="score_success">打分成功</string>
+    <string name="score_fail">打分失败</string>
+    <string name="score_for">给%1$s打分</string>
+    <!-- setting -->
+    <string name="personal_setting_string">编辑个人资料</string>
+    <string name="system_setting_string">设置</string>
+    <string name="more_string">更多</string>
+    <string name="grade_xingyun">打分</string>
+    <string name="check_xingyun">查看</string>
+    <string name="about_xingyun">关于</string>
+    <string name="about_xingyun_2">关于我们</string>
+    <string name="share_app">把颜值APP告诉朋友</string>
+    <string name="app_recommend">应用推荐</string>
+    <string name="logout_xingyun">退出登录</string>
+    <string name="logout_xingyun_tip">确定要退出吗？</string>
+    <string name="unbind_mobile_warning">确定要解绑吗？</string>
+    <string name="warning">请注意账号安全！</string>
+    <string name="myxy">我的颜值</string>
+    <string name="xynum">颜值号</string>
+    <string name="xynum_2">颜值号：</string>
+    <string name="psersonal_title">个人身份：%1$s</string>
+    <string name="xingyun_renzhen">认证：%1$s</string>
+    <string name="weibo_renzhen">微博认证：%1$s</string>
+    <string name="filter">筛选</string>
+    <string name="filtered">已筛选</string>
+    <string name="filter_args">筛选(%1$s)</string>
+    <string name="filter_type_new">最新</string>
+    <string name="filter_type_payuser">按星级会员</string>
+    <string name="filter_type_v">按颜值精英V用户</string>
+    <string name="filter_type_s">按颜值明星S用户</string>
+    <string name="filter_type_sinav">按新浪V用户</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="my_verified">颜值认证</string>
+    <string name="my_verified_prefix">颜值认证：</string>
+    <string name="sina_verified">新浪认证</string>
+    <string name="xy_discount">会员尊享</string>
+    <string name="xy_discount_request">商家申请</string>
+    <string name="xy_search_filter">搜索屏蔽</string>
+    <string name="catlog_ranking_billboard">圈子排行榜</string>
+    <string name="xy_verified_new">官方认证</string>
+    <string name="xy_user_level">用户等级</string>
+
+    <!-- 绑定 -->
+    <string name="bind">绑定设置</string>
+    <string name="bind_prompt_1">绑定手机号码后，可使用手机号码登陆</string>
+    <string name="bind_prompt_2">如果你通讯录中的朋友注册颜值系统会通知你</string>
+    <string name="bind_prompt_3">如果当前的手机号不能使用了，请及时来这里更换手机号</string>
+    <string name="bind_prompt_4">更换手机号</string>
+    <string name="bind_yet">绑定</string>
+    <string name="unbind">解绑</string>
+    <string name="bind_done">已绑定</string>
+    <string name="bind_password">修改手机登录密码</string>
+    <string name="bind_phone_password_title">填写密码</string>
+    <string name="bind_phone_change_password_title">修改密码</string>
+    <string name="bind_phone_password_hint1">颜值可使用手机号码作为用户名登陆</string>
+    <string name="bind_phone_password_hint2">请设置一个密码</string>
+    <string name="bind_weibo_title">绑定微博账号</string>
+    <string name="bind_weibo_ask">您还没有绑定新浪微博，无法分享到新浪微博，现在绑定吗？</string>
+    <string name="bind_wechat">微信</string>
+    <string name="bind_wechat_tips">请先绑定手机并设置密码</string>
+    <string name="bind_phone_first">绑定手机</string>
+    <string name="bind_main_count">主账号</string>
+    <string name="bind_phone_tips">为保证帐号安全，请先绑定手机号并设置登录密码。</string>
+    <string name="bind_wechat_yet">已绑定：手机 微信</string>
+    <string name="bind_sina_yet">已绑定：手机 微博</string>
+    <string name="bind_wechat_sina_yet">已绑定：手机 微博 微信</string>
+    <string name="bind_phone_yet">已绑定：手机</string>
+    <string name="bind_mobile_not">暂未绑定主账号</string>
+
+    <!-- 联系方式 -->
+    <string name="my_contact_hint">以下联系方式，您可选择是否公开显示\n未开启项不可见，保存后生效，请放心填写</string>
+    <string name="my_contact_phone_title">手机</string>
+    <string name="my_contact_phone_hint">填写手机号码</string>
+    <string name="my_contact_phone_warn">请填写正确的手机号码</string>
+    <string name="my_contact_phone_title_modify">修改手机</string>
+    <string name="my_contact_mail_title">邮箱</string>
+    <string name="my_contact_mail_hint">请填写您常用的邮箱地址</string>
+    <string name="my_contact_mail_title_modify">修改邮箱</string>
+    <string name="my_contact_mail_title_warn">邮箱格式错误</string>
+    <string name="my_contact_qq_title">QQ</string>
+    <string name="my_contact_qq_hint">例如：17006666</string>
+    <string name="my_contact_qq_title_modify">修改QQ</string>
+    <string name="my_contact_weixin_title">微信号</string>
+    <string name="my_contact_weixin_hint">例如：xingyun</string>
+    <string name="my_contact_weixin_title_modify">修改微信号</string>
+    <string name="my_contact_weibo_title">微博地址</string>
+    <string name="my_contact_weibo_hint">例如：http://weibo.com/xingyunnet</string>
+    <string name="my_contact_weibo_title_modify">修改微博地址</string>
+    <string name="my_contact_jingjiren_title">经纪人电话</string>
+    <string name="my_contact_jingjiren_hint">您可以留下您经纪人的电话</string>
+    <string name="my_contact_jingjiren_title_modify">修改经纪人电话</string>
+    <string name="my_contact_zhuli_title">助理电话</string>
+    <string name="my_contact_zhuli_hint">您可以留下您助理的电话</string>
+    <string name="my_contact_zhuli_title_modify">修改助理电话</string>
+    <string name="my_contact_address_title_modify">修改邮寄地址</string>
+    <string name="my_contact_address_title">邮寄地址</string>
+    <string name="my_contact_address_hint">您可以留下您的邮寄地址</string>
+
+    <!-- 联系星云 -->
+    <string name="contact_xingyun_start_new_star">明星或新星入住咨询</string>
+    <string name="contact_xingyun_elite_auth">精英认证咨询</string>
+    <string name="contact_xingyun_star_consult">星会员咨询</string>
+    <string name="contact_xingyun_bd_operation">商业合作</string>
+    <string name="contact_xingyun_join_us">加入我们</string>
+    <string name="contact_xingyun_media_operation">媒体合作</string>
+    <string name="contact_xingyun_about_xingyun">关于我们</string>
+    <string name="contact_xingyun_reason_xingyun">意见反馈</string>
+    <string name="contact_xingyun_apply_member">申请颜值会员</string>
+    <string name="contact_xingyun_apply_approve_member">申请颜值认证</string>
+    <string name="contact_cingyun_mark_xingyun">给我们评价</string>
+
+    <!-- 编辑档案 -->
+    <string name="my_profile_hint">以下信息将在颜值平台公开显示，请认真填写</string>
+    <string name="my_profile_nickname">真实姓名</string>
+    <string name="my_profile_nickname_modify">修改真实姓名</string>
+    <string name="my_profile_english">英文名</string>
+    <string name="my_profile_english_modify">修改英文名</string>
+    <string name="my_profile_gender">性别</string>
+    <string name="my_profile_nation">民族</string>
+    <string name="my_profile_birthday">生日</string>
+    <string name="my_profile_birthday_hint">输入出生日期，系统会自动设置相应星座</string>
+    <string name="my_profile_birthday_age_hint">隐藏年龄</string>
+    <string name="my_profile_constellation">星座</string>
+    <string name="my_profile_constellation_up">上升星座</string>
+    <string name="my_profile_height">身高</string>
+    <string name="my_profile_height_hint">单位： cm</string>
+    <string name="my_profile_height_unit">CM</string>
+    <string name="my_profile_shape">三围</string>
+    <string name="my_profile_shape1">胸围</string>
+    <string name="my_profile_shape2">腰围</string>
+    <string name="my_profile_shape3">臀围</string>
+    <string name="my_profile_weight">体重</string>
+    <string name="my_profile_weight_hint">单位： kg</string>
+    <string name="my_profile_weight_unit">kg</string>
+    <string name="my_profile_blood">血型</string>
+    <string name="my_profile_city_born">家乡</string>
+    <string name="my_profile_city_live">所在地</string>
+    <string name="my_profile_school">学校</string>
+    <string name="my_profile_school_status">在读</string>
+    <string name="my_profile_language">擅长语言</string>
+    <string name="my_profile_delegate">代表作</string>
+    <string name="my_profile_company">当前公司</string>
+    <string name="my_profile_broker_company">经纪公司</string>
+    <string name="my_profile_broker">经纪人</string>
+    <string name="my_profile_gender_modify">修改性别</string>
+    <string name="my_profile_nation_modify">修改民族</string>
+    <string name="my_profile_birthday_modify">修改生日</string>
+    <string name="my_profile_constellation_modify">修改星座</string>
+    <string name="my_profile_constellation_up_modify">修改上升星座</string>
+    <string name="my_profile_height_modify">修改身高</string>
+    <string name="my_profile_shape_modify">修改三围</string>
+    <string name="my_profile_weight_modify">修改体重</string>
+    <string name="my_profile_blood_modify">修改血型</string>
+    <string name="my_profile_city_born_modify">修改家乡</string>
+    <string name="my_profile_city_live_modify">修改所在地</string>
+    <string name="my_profile_school_modify">修改学校</string>
+    <string name="my_profile_language_modify">修改擅长语言</string>
+    <string name="my_profile_delegate_modify">修改代表作</string>
+    <string name="my_profile_company_modify">修改当前公司</string>
+    <string name="my_profile_broker_company_modify">修改经纪公司</string>
+    <string name="my_profile_input_nikename">填写你的昵称</string>
+    <string name="my_profile_input_email">常用邮箱</string>
+    <string name="my_profile_broker_modify">修改经纪人</string>
+    <string name="myself_edit_profile">编辑资料</string>
+
+    <!-- main list item -->
+    <string name="ip_from_type_string">iPhone</string>
+    <string name="xingyun_net_name">颜值网</string>
+    <string name="android_from_type_string">Android</string>
+    <string name="fire_from_type_string">火星</string>
+    <string name="show_string">展示</string>
+    <string name="show_production">作品</string>
+    <string name="forward_string">分享到动态</string>
+    <string name="dynamic_string">动态</string>
+    <string name="profession_string">专业服务</string>
+    <string name="transmit">转发</string>
+
+    <!-- conversation -->
+    <string name="input_hint_string">请输入内容</string>
+    <string name="chat_voice_btn">按住    说话</string>
+    <string name="chat_enter_the_content_please">请输入内容</string>
+    <string name="conversation_info_string">聊天信息</string>
+    <string name="check_context">查看全文</string>
+    <string name="location">位置</string>
+    <string name="typing_string">对方正输入&#8230;</string>
+    <string name="saying_string">对方正说话&#8230;</string>
+    <string name="filter_string">筛选</string>
+
+    <!-- attachment -->
+    <string name="attachment_panel_smiley">表情</string>
+    <string name="attachment_panel_photo">拍照</string>
+    <string name="attachment_panel_picture">相册</string>
+    <string name="attachment_panel_dashang">打赏</string>
+    <string name="attachment_panel_position">位置</string>
+    <string name="attachment_panel_visitcard">名片</string>
+
+    <!-- voice -->
+    <string name="record_loadingandwait">正在加载,请稍候&#8230;</string>
+    <string name="voice_recode_cancel">松开则取消发送</string>
+    <string name="voice_recording">拖至此处取消</string>
+    <string name="voice_record_failed_try_again">启动录音失败，请重试</string>
+    <string name="chat_audio_time_hint">录音时间过短</string>
+    <string name="send_success">发送成功</string>
+
+    <!-- personal -->
+    <string name="personal_home_page">个人首页</string>
+    <string name="personal_home_page_2">个人主页</string>
+    <string name="personal_data">个人资料</string>
+    <string name="personal_add_photo">长按照片，可以设为默认头像或删除</string>
+    <string name="privacy_setting">隐私设置</string>
+    <string name="base_info">基础资料</string>
+    <string name="personal_nickname">昵称</string>
+    <string name="personal_nickname_hint_empty">昵称不能为空</string>
+    <string name="personal_nickname_hint">请输入4-30个字符、中英文、数字、“_”或减号</string>
+    <string name="personal_nickname_modify">修改昵称</string>
+    <string name="personal_verifed_modify">修改官方认证</string>
+    <string name="personal_title">行业身份</string>
+    <string name="personal_title_modify">修改行业身份</string>
+    <string name="personal_intro">一句简介</string>
+    <string name="personal_intro_modify">修改一句简介</string>
+    <string name="personal_contact">联系方式</string>
+    <string name="personal_profile">编辑档案</string>
+    <string name="personal_trades">感兴趣行业</string>
+    <string name="personal_trades_hint">最多可选择6个行业</string>
+    <string name="personal_goodat">我擅长的</string>
+    <string name="personal_goodat_1">擅长</string>
+    <string name="personal_interests">兴趣爱好</string>
+    <string name="personal_interests_modify">修改兴趣爱好</string>
+    <string name="personal_skill_modify">修改擅长技能</string>
+    <string name="personal_skill_hint01">可以填写12个，标签之间以</string>
+    <string name="personal_skill_hint02">空格</string>
+    <string name="personal_skill_hint03">分开</string>
+    <string name="personal_basic_data">基本资料</string>
+    <string name="personal_is_vip">已开通</string>
+    <string name="personal_is_not_vip">未开通</string>
+    <string name="personal_logo_modify">替换头像</string>
+    <string name="personal_info">个人信息</string>
+    <string name="personal_isFollow">是否取消关注</string>
+    <string name="personal_isFollow_sure">确定关注Ta?以后将不再提示</string>
+
+    <!-- about -->
+    <string name="about_xingyun_version_string">版本</string>
+    <string name="about_xingyun_new_version_string">新版本:%1$s</string>
+    <string name="about_xingyun_new_version_prompt">版本更新</string>
+    <string name="about_xingyun_intro_string">颜值简介</string>
+    <string name="about_xingyun_welcome_string">欢迎页</string>
+    <string name="about_xingyun_latest_string">已经是最新版本</string>
+    <string name="about_xingyun_get_latest_version">正在检测新版本</string>
+    <string name="about_xingyun_help_string">颜值帮助</string>
+    <string name="about_xingyun_welcome_btn_string">立即体验</string>
+    <string name="about_xingyun_welcome_share_string">支持颜值！分享到微博</string>
+    <string name="about_xingyun_app_url">http://www.xingyun.cn/html/app/aboutapp.html?versionid=%1$s</string>
+
+    <!-- system setting -->
+    <string name="system_setting_push_msg_string">消息推送设置</string>
+    <string name="system_setting_msg_string">私信不显示消息详情</string>
+    <string name="system_setting_sound_string">私信声音</string>
+    <string name="system_setting_earphone_string">听筒模式</string>
+    <string name="system_setting_cache_string">清除缓存</string>
+    <string name="system_setting_timeline_blacklist_string">不看对方动态</string>
+    <string name="system_setting_filter_string">屏蔽用户列表</string>
+    <string name="system_setting_blacklist_string">黑名单</string>
+    <string name="system_setting_more_string">更多系统设置，请登录XINGYUN.CN</string>
+    <string name="system_setting_newversion_string">新版本</string>
+    <string name="system_setting_add_black_list">加入黑名单</string>
+    <string name="abort_send_dynamic_warning">确定要放弃吗？</string>
+    <string name="abort_top_warning">不再置顶该内容？</string>
+    <string name="move_top_warning">确定置顶？只可置顶一条内容。</string>
+    <string name="top_success">置顶成功</string>
+    <string name="top_fail">置顶失败</string>
+    <string name="top_cancel_success">取消置顶成功</string>
+    <string name="top_cancel_fail">取消置顶失败</string>
+
+    <!-- 私信 -->
+    <string name="private_msg_local_file_null">本地语音文件已经被删除</string>
+    <string name="private_msg_top_chat">置顶聊天</string>
+    <string name="private_msg_new_msg_notifycation">新消息通知</string>
+    <string name="private_msg_sync_loading">正在同步私信，请稍后&#8230;</string>
+    <string name="private_msg_delete_item">删除这条会话吗？</string>
+    <string name="private_msg_pic_no_exist">图片不存在</string>
+    <string name="private_msg_forward_pic_comfirm">确定转发该图片？</string>
+    <string name="private_msg_record_time_too_short">录音时间太短</string>
+    <string name="private_msg_record_try_again">请重新录制</string>
+    <string name="private_msg_upload_fail_record_try_again">上传语音失败，请重新录制</string>
+    <string name="private_msg_upload_img_fail_try_again">上传图片失败，请重新发送</string>
+    <string name="private_msg_pic">[图片]</string>
+    <string name="private_msg_voice">[语音]</string>
+    <string name="send_star_message">发私信</string>
+    <string name="private_msg_ignore">忽略未读</string>
+
+    <!-- push message setting -->
+    <string name="push_msg_setting_newmsg_string">新私信</string>
+    <string name="push_msg_setting_newcomment_string">评论</string>
+    <string name="push_msg_setting_newzan_string">赞</string>
+    <string name="push_msg_setting_newmsg_not_details">新私信不显示详情</string>
+    <string name="push_msg_setting_newfans_string">新粉丝</string>
+    <string name="push_msg_setting_comment_string">被评论</string>
+    <string name="push_msg_setting_mayknow_string">可能认识的人</string>
+    <string name="push_msg_setting_xynews_string">颜值通知</string>
+
+    <!-- black list -->
+    <string name="blacklist_button_string">解除</string>
+
+    <!-- 粉丝 -->
+    <string name="fans">粉丝</string>
+    <string name="fans_none">0人关注</string>
+    <string name="fans_count">人关注</string>
+
+    <!-- 关注 -->
+    <string name="follow">关注</string>
+    <string name="follow_none">0人关注</string>
+    <string name="follow_count">人关注</string>
+
+    <!-- 可能认识的人 -->
+    <string name="may_know_follow_none">0人关注</string>
+    <string name="may_know_follow_count">人关注</string>
+
+    <!-- 相互关注 -->
+    <string name="ensure_hide_friend">是否隐藏好友</string>
+    <string name="ensure_cancel_hide_friend">是否取消隐藏好友</string>
+    <string name="refresh_text">更新</string>
+
+    <!-- 合作 -->
+    <string name="cooperation_more_title">更多</string>
+    <string name="cooperation_more_search">搜索合作</string>
+    <string name="cooperation_more_search_button">搜索</string>
+    <string name="cooperation_more_search_null_hint">搜索关键字不能为空</string>
+    <string name="cooperation_more_apply">申请合作</string>
+    <string name="cooperation_more_apply_title">展示</string>
+    <string name="cooperation_contact">联系方式</string>
+    <string name="cooperation_recommend">推荐</string>
+    <string name="cooperation_follow">加关注</string>
+    <string name="cooperation_followed">已关注</string>
+    <string name="cooperation_subscribe">订阅</string>
+    <string name="cooperation_subscribed">已订阅</string>
+    <string name="cooperation_star_host">星主 HOST</string>
+    <string name="cooperation_cancel_follow_warning">是否要取消关注？</string>
+    <string name="cooperation_price_asc">价格升序</string>
+    <string name="cooperation_price_desc">价格降序</string>
+
+    <!-- 性别选择 -->
+    <string name="popup_gender_select_all">全部</string>
+    <string name="popup_gender_select_male">只看男</string>
+    <string name="popup_gender_select_female">只看女</string>
+    <string name="popup_gender_select_cancel">取消</string>
+    <string name="popup_girl">女</string>
+    <string name="popup_man">男</string>
+
+    <!-- 搜索 -->
+    <string name="search_by_xing_yun_num_input_null">请输入要查找到颜值账号</string>
+    <string name="search_by_xing_yun_num_not_exist_title">该用户不存在</string>
+    <string name="search_by_xing_yun_num_not_exist_message">无法找到该用户，请检查你填写的帐号是否正确。</string>
+
+    <!-- 详细资料 -->
+    <string name="group_detail_title_string">详细资料</string>
+    <string name="group_detail_join_button_string">进入聊天</string>
+
+    <!-- 星友圈 -->
+    <string name="time_line_activity_title">星友圈</string>
+    <string name="time_line_delete_warning">确认删除？</string>
+
+    <!-- YesNo -->
+    <string name="activity_yes_no_title">YES/NO</string>
+
+    <!-- tips -->
+    <string name="net_error_tips">无网络</string>
+    <string name="net_error_login_fail">登陆失败，请检查您的网络</string>
+    <string name="net_error_1">网络异常,请检查您的网络 </string>
+    <string name="net_error_try_again">载入失败  点击重试</string>
+    <string name="net_error_delete_fail">网络异常，删除失败</string>
+    <string name="unknow_exception">哇，出现了意料之外的错误</string>
+    <string name="delete_fail">删除失败</string>
+    <string name="not_more_comments">额，没有更多评论了 &#8230; </string>
+    <string name="not_more_dynamic">额，没有更多动态了 &#8230; </string>
+    <string name="send_verifycode_fail">发送验证码失败 </string>
+    <string name="recommend_count">我已支持 %1$s 次</string>
+    <string name="recommend_people">向大家推荐 %1$s </string>
+    <string name="resend_message">重新发送 </string>
+    <string name="resend_message_content">重新发送这条信息吗？ </string>
+    <string name="already_copy">已复制</string>
+    <string name="read_image_info_loading">正在读取图片信息&#8230;</string>
+    <string name="xy_slogan">明星美女型男娱乐社交！</string>
+    <string name="union_publish">联合首发</string>
+    <string name="exclusive_publish">联合首发</string>
+    <string name="pull_to_bottom">你居然拉到底了&#8230;</string>
+    <string name="app_login">登录</string>
+    <string name="safety_setting">安全设置</string>
+    <string name="i_know">我知道了</string>
+    <string name="location_fail">定位失败</string>
+    <string name="xy_know">知道了</string>
+    <string name="comment_has_private">部分评论已设置隐私</string>
+    <string name="recent_tips">对方未关注你，不能发私信</string>
+
+    <!-- CommentDetailsActivity -->
+    <string name="hot_comment">热门评论</string>
+    <string name="all_comment">全部评论</string>
+    <string name="loading_comment_details">正在加载评论详情&#8230;</string>
+    <string name="add_comment_loading">正在添加评论，请稍后&#8230;</string>
+    <string name="replay_comment">回复：%1$s</string>
+    <string name="replay_comment_prefix">回复：%1$s:</string>
+    <string name="replay_comment2">回复%1$s:%2$s</string>
+    <string name="replay_comment_private">悄悄回复 %1$s:%2$s</string>
+    <string name="replay_comment_private_prefix">悄悄回复%1$s:</string>
+    <string name="replay_zan_private">悄悄回复 支持 %1$s:%2$s</string>
+    <string name="replay_zan_private_prefix">悄悄回复 支持 %1$s:</string>
+    <string name="replay_zan">回复 支持 %1$s:%2$s</string>
+    <string name="replay_zan_prefix">回复 支持 %1$s:</string>
+    <string name="comment_private">悄悄评论:%1$s</string>
+    <string name="xy_delete_comment">删除评论</string>
+    <string name="xy_delete_success">删除成功</string>
+    <string name="xy_delete_comment_ask">删除评论 " %1$s " 吗 ？</string>
+    <string name="xy_delete_comment_ask_2">删除评论吗 ？</string>
+    <string name="xy_delete_comment_success">删除评论成功</string>
+    <string name="xy_delete_comment_fail">删除评论失败</string>
+    <string name="xy_delete_comment_doing">正在删除评论&#8230;</string>
+    <string name="xy_add_like_doing">正在添加支持&#8230;</string>
+    <string name="xy_cancel_like_doing">正在取消支持&#8230;</string>
+    <string name="xy_cancel_like">取消</string>
+    <string name="xy_show_like">支持</string>
+    <string name="xy_show_like_forward">支持并转发</string>
+    <string name="xy_cancel_like_fail">取消支持失败</string>
+    <string name="xy_voice">语音</string>
+    <string name="xy_comment_and_forward">评论并转发</string>
+    <string name="xy_receiver_comment">收到的评论</string>
+
+    <!-- 访问过的人 -->
+    <string name="visitor_people">看过的人</string>
+    <string name="how_many_follow">%1$s 关注</string>
+
+    <!-- dynamic -->
+    <string name="follow_yes">已关注</string>
+    <string name="follow_add">加关注</string>
+    <string name="friends_string">好友</string>
+    <string name="follow_double">互相关注</string>
+    <string name="add_follow_doing">正在关注 &#8230;</string>
+    <string name="cancel_follow_doing">取消关注 &#8230;</string>
+
+    <!-- 相册 -->
+    <string name="commpleted_count_percent">完成(%1$s/%2$s)</string>
+    <string name="commpleted_count">完成(%1$s)</string>
+    <string name="max_selected_photo">最多只能选择%1$s张照片</string>
+    <string name="max_selected_cover">最多只能选择1张</string>
+    <string name="in_data_error">传入数据错误</string>
+    <string name="selected_photo_index">(%1$s/%2$s)</string>
+    <string name="support_user_prefix">%1$s 支持用户</string>
+    <string name="dynamic_navigation">导航</string>
+    <string name="peronal_resume">个人简历</string>
+    <string name="album_preview_count_prefix">预览(%1$s)</string>
+    <string name="album_count_prefix">%1$s张</string>
+
+    <!-- 上传通讯录 -->
+    <string name="mobile_number">手机号码</string>
+    <string name="mobile_confirm">确认手机号码</string>
+    <string name="mobile_warning">我们将发送验证码到这个号码： +86 </string>
+    <string name="input_confirm_code">输入验证码</string>
+    <string name="input_confirm_code_txt1">我们已发送</string>
+    <string name="input_confirm_code_txt2">验证码短信</string>
+    <string name="input_confirm_code_txt3">到这个号码</string>
+    <string name="password_set_title">填写密码</string>
+    <string name="password_set_txt1">颜值可使用手机号码作为用户名登陆</string>
+    <string name="password_set_txt2">请设置一个密码</string>
+    <string name="password_set_edittext_hint">请输入6-16位数字、字母密码</string>
+    <string name="send_identify_code_failed_reason_msg_failed">短信发送失败，请重试</string>
+    <string name="send_identify_code_failed_reason_mobile_bound_already">此手机号已已被绑定，请更换</string>
+    <string name="send_identify_code_failed_reason_mobile_unbound">账号未绑定手机号</string>
+    <string name="send_identify_code_failed_wrong_mobile">手机号错误</string>
+    <string name="send_identify_code_failed_same_mobile">更改的手机号与原来的手机号一样</string>
+    <string name="confirm_identify_code_failed_reason1">验证码错误或者已过期，请重新输入</string>
+
+    <!--  -->
+    <string name="unbind_warning_title">停用手机通讯录匹配</string>
+    <string name="unbind_warning_message">停用后，颜值将不能为你找到手机通讯录里的朋友，服务器上属于你的通讯录数据也将被删除。</string>
+
+    <!-- 专业会员功能 -->
+    <string name="vip_function_title">专业会员功能</string>
+    <string name="show_more_text">显示更多</string>
+    <string name="support_people">%1$s人</string>
+    <string name="close_more_text">收回</string>
+    <string name="zan_max_count">99+</string>
+    <string name="comment_count_person">评论</string>
+    <string name="show_count">展示(%1$s)</string>
+    <string name="dynamic_count">动态(%1$s)</string>
+    <string name="visitor_count_prefix">看过%1$d</string>
+    <string name="visitor_count">看过</string>
+    <string name="visitor_count_2">人气(%1$s)</string>
+    <string name="visitor_count_3">访问量：%1$s</string>
+    <string name="visitor_count_4">人气 %1$s</string>
+    <string name="visitor_count_5">访问量 %1$s</string>
+    <string name="visitor_count_6">人气</string>
+    <string name="from_type">来自%1$s</string>
+    <string name="have_fans_count">粉丝%1$s</string>
+    <string name="xy_forward_success">转发成功</string>
+    <string name="xy_success">成功</string>
+    <string name="xy_forward_fail">转发失败</string>
+    <string name="xy_cause">原因：</string>
+    <string name="xy_error_code">错误码：</string>
+    <string name="xy_content_deleted">抱歉，此内容已被作者删除。</string>
+    <string name="support_succeed_hint">已支持</string>
+
+    <!-- 隐私设置 -->
+    <string name="no_see_he_status">不看此人的动态</string>
+    <string name="hide_this_for_my_friend">对我朋友隐藏此人</string>
+    <string name="post_rubbish_ad">发布垃圾广告</string>
+    <string name="repot_not_true">举报不实内容</string>
+    <string name="out_of_private">泄露他人隐私</string>
+    <string name="no_civilization">不文明行为</string>
+    <string name="sensitivity_msg">敏感信息</string>
+    <string name="false_winning">虚假中奖</string>
+    <string name="add_black_list_and_report">加入黑名单</string>
+    <string name="cancel_black_list">解除拉黑</string>
+    <string name="hide_my_location">隐藏我的位置</string>
+    <string name="hide_my_follow">隐藏我关注的人</string>
+
+    <!-- 评论相关 -->
+    <string name="comment_reply">回复评论</string>
+    <string name="comment_whisper">悄悄话</string>
+    <string name="add_comment">添加评论</string>
+    <string name="comment_people_count">评论%1$d</string>
+    <string name="comment_new_count">%1$d条新消息</string>
+    <string name="desc_shrinkup">收起</string>
+    <string name="desc_spread">显示更多</string>
+    <string name="comment_hot">热门评论</string>
+    <string name="comment_hot_more">更多热门评论 ></string>
+
+    <!-- 分享相关 -->
+    <string name="share_system_setting">系统设置</string>
+    <string name="share_private_setting">隐私设置</string>
+    <string name="share_friend">颜值好友</string>
+    <string name="share_wxcircle">微信朋友圈</string>
+    <string name="share_wx">微信好友</string>
+    <string name="share_weibo">新浪微博</string>
+    <string name="share_2_weibo">分享到新浪微博</string>
+    <string name="share_xy">发送给朋友</string>
+    <string name="share_default_img_path">https://dn-pp-res.qbox.me/xingyun/logo03.jpg</string>
+    <string name="share_str_title1">我在颜值！分享</string>
+    <string name="share_str_title2">的动态：</string>
+    <string name="share_str_title3">的个人颜值 </string>
+    <string name="share_success">分享成功</string>
+    <string name="share_fail">分享失败</string>
+    <string name="share_loading">正在分享&#8230;</string>
+    <string name="weibo_verified_prefix">新浪：%1$s</string>
+    <string name="peronal_verified__prefix">身份：%1$s</string>
+    <string name="weibo_verified">新浪：</string>
+    <string name="peronal_verified">身份：</string>
+    <string name="move_2_top">置顶</string>
+    <string name="cancel_move_2_top">取消置顶</string>
+    <string name="share_invite_friend">邀请微信好友</string>
+    <string name="share_2_cycle">分享到朋友圈</string>
+    <string name="can_not_share2weibo">你尚未绑定微博</string>
+
+    <!-- 微博授权 -->
+    <string name="weibosdk_demo_token_to_string_format">Token：%1$s \nRefresh Token：%2$s \nexpires_in：%3$s</string>
+    <string name="weibosdk_demo_token_to_string_format_1">Token：%1$s \n有效期：%2$s</string>
+    <string name="weibosdk_demo_toast_auth_success">授权成功</string>
+    <string name="weibosdk_demo_toast_auth_failed">授权失败</string>
+    <string name="weibosdk_demo_token_has_existed">Token 仍在有效期内，无需再次登录。</string>
+    <string name="crop__done">确定</string>
+    <string name="crop__cancel">取消</string>
+    <string name="crop__saving">正在保存图片…</string>
+    <string name="crop__wait">请稍等…</string>
+    <string name="crop__pick_error">No image sources available</string>
+
+    <!-- 约见 -->
+    <string name="wemeet_apply">报名</string>
+    <string name="wemeet_apply_see">报名见面</string>
+    <string name="wemeet_details">详情   ></string>
+    <string name="wemeet_apply_count">%1$d 报名</string>
+    <string name="wemeet_apply_count_2">%1$d人 报名</string>
+    <string name="wemeet_meet_star">明星见面</string>
+    <string name="wemeet_selected">已被选中</string>
+    <string name="wemeet_finish">已结束</string>
+    <string name="wemeet_not_apply">未报名</string>
+    <string name="wemeet_already_apply">已报名</string>
+    <string name="wemeet_apply_success">报名成功</string>
+    <string name="wemeet_apply_fail">报名失败</string>
+    <string name="wemeet_apply_fail_reason">报名失败，您已经报名。</string>
+    <string name="wemeet_apply_doing">正在报名</string>
+    <string name="wemeet_apply_doing_2">进行中</string>
+    <string name="wemeet_cancel_apply_doing">正在取消报名</string>
+    <string name="wemeet_cancel_apply_success">取消报名成功</string>
+    <string name="wemeet_cancel_apply_fail">取消报名失败</string>
+    <string name="wemeet_cancel_apply_fail_reason">取消报名失败，您已经报名。</string>
+    <string name="wemeet_star_meet_manager">我报名的见面</string>
+    <string name="wemeet_cancel_apply_ask">确定取消报名吗？</string>
+
+    <!-- 事件统计 -->
+    <string name="stat_is_login_user">是否登陆用户</string>
+    <string name="stat_login_user">登陆用户</string>
+    <string name="stat_logout_user">未登陆用户</string>
+    <string name="stat_active_user">活跃用户</string>
+    <string name="stat_activ_more_user">非常活跃用户</string>
+    <string name="stat_activ_most_user">超活跃用户</string>
+
+    <!-- 主界面同城 -->
+    <string name="city_tips">现在晒出你的美颜!\n将有机会第一个在这里出现!</string>
+    <string name="city_location_tips">请先开启定位:\n设置-隐私-定位服务-颜值</string>
+    <string name="city_meiyan">这座城市需要你的美颜!\n快去晒照,争取第一个被推荐!</string>
+    <string name="city_no_location_tips">无法定位</string>
+    <string name="city_no_location_refresh_tips">正在定位</string>
+
+    <!-- 动态为空提示语 -->
+    <string name="dynamic_tip_send">你们的关注会鼓励Ta发动态哦~</string>
+    <string name="dynamic_tip_you">有颜? 有型? 有范儿?</string>
+    <string name="dynamic_tip_show">那就晒呀!</string>
+    <string name="my_score">我的积分</string>
+    <string name="score">打分</string>
+    <string name="no_score">暂无平均分</string>
+
+    <!-- 体验相关 -->
+    <string name="experience_ing">正在体验</string>
+    <string name="experience_no">不分享体验</string>
+    <string name="experience_numbers">%1$s人\n颜值体验</string>
+    <string name="experience_sign_counts">%1$s人去过</string>
+    <string name="experience_collect_counts">%1$s人想去</string>
+    <string name="experience_average_tips">人均：</string>
+    <string name="experience_average_count">￥%1$d</string>
+    <string name="experience_send">发布体验</string>
+    <string name="experience_send_tips">成为 %1$s 可发布体验</string>
+    <string name="experience_location_desc">设置体验地点后该动态将成为体验动态</string>
+    <string name="experience_yanzhi_tips">颜值体验</string>
+    <string name="experience_publish">体验</string>
+    <string name="experience_phone_tip">是否拨通号码</string>
+    <string name="experience_collect_tip">不再想去？</string>
+    <string name="experience_collected">已收藏</string>
+    <string name="experience_collect">想去</string>
+    <string name="experience_signed">已去过</string>
+    <string name="experience_sign">去过</string>
+    <string name="experience_count">体验(%1$d)</string>
+    <string name="experience_string">体验</string>
+    <string name="experience_add">增加体验</string>
+    <string name="experience_update">修改体验</string>
+    <string name="experience_delete">移除体验</string>
+    <string name="experience_update_error">修改体验失败</string>
+    <string name="experience_delete_error">移除体验失败</string>
+    <string name="experience_add_error">增加体验失败</string>
+    <string name="experience_detail_numbers">%1$s人颜值体验</string>
+    <string name="experience_favorite_collect">我想去的</string>
+    <string name="experience_favorite_sign">我去过的</string>
+    <string name="experience_counts">%1$d人体验</string>
+    <string name="experience_location_is_not_null">经纬度不能为空</string>
+    <string name="experience_receive_in_params_error">传入参数错误</string>
+    <string name="experience_baidu_map_not_install">您尚未安装百度地图app或app版本过低，请安装最新版后再重试。</string>
+    <string name="experience_gaode_map_not_install">您尚未安装高德地图app或app版本过低，请安装最新版后再重试。</string>
+    <string name="experience_no_contact">暂无联系方式</string>
+    <string name="experience_cancel_tips">确认移除体验？</string>
+    <string name="experience_choose_phone">请选择拨打哪个号码？</string>
+    <string name="experience_location_error">定位失败，请重新定位后再操作。</string>
+    <string name="experience_sign_collect">%1$s人去过 / %2$s人想去</string>
+    <string name="experience_vip_can_add">颜值会员和认证用户可添加体验。</string>
+    <string name="experience_click_2_apply_vip">立即点击申请 ></string>
+    <string name="experience_can_not_update">文字或语音不存在不能修改</string>
+
+
+    <string name="detail_zan_count">%1$s人悄悄赞</string>
+    <string name="detail_comment_count">%1$s条评论</string>
+
+    <string name="pull_to_loading">加载ing</string>
+    <string name="pull_down_refresh">下拉刷新</string>
+    <string name="pull_refresh">松手加载</string>
+
+    <!-- 微信支付 -->
+    <string name="weixin_pay_tips">打赏后,如果对方72小时未回复,\r\n赏金将退回微信账户.请放心支付</string>
+    <string name="person_dashang_tips_title">打赏发私信</string>
+    <string name="person_dashang_tips">试试给Ta打赏，如果Ta领赏了，就可以发私信啦</string>
+    <string name="weixinpay_rule_url">http://www.xingyun.cn/about/h5/payandchat</string>
+    <string name="rule">规则</string>
+    <string name="weixinpay_dashangto">打赏给%s</string>
+    <string name="weixinpay_yuan">%s 元</string>
+
+    <!-- 我的财富 -->
+    <string name="myincome_fortune">￥%1$s</string>
+    <string name="myincome_history_fortune">历史总收入: %1$s 元</string>
+    <string name="myincome_rank_url">http://t.cn/R4yUCna</string>
+    <string name="myincome_withdraw_url">http://www.xingyun.cn/home/extract</string>
+    <string name="myincome_tixian_ing">正在提现</string>
+    <string name="myincome_tixian">提现</string>
+    <string name="myincome_total_dashang">共打赏</string>
+    <string name="myincome_zhichu">支出</string>
+    <string name="myincome_dengji">等级</string>
+    <string name="myincome_dangqian_caiwu">当前财富</string>
+
+    <!-- 交易明细 -->
+    <string name="trade_detail">交易明细</string>
+    <string name="trade_myself_income">我的收益</string>
+    <string name="trade_yuan">%1$s 元</string>
+    <!--红包相关  -->
+    <string name="reward_outtime">打赏已过期，赏金将退回</string>
+    <string name="reward_outtime_how_tuikuan">如何退款</string>
+    <string name="reward_ok">好的</string>
+
+    <string name="reward_receive">对方已领取赏金</string>
+    <string name="reward_receive_know">知道了</string>
+
+    <string name="reward_wait">等待对方领赏</string>
+    <string name="reward_look_rule">查看规则</string>
+
+    <string name="reward_look_myincome">查看收益</string>
+    <string name="reward_cencle">取消</string>
+
+    <string name="reward_receive_reply">回复私信即得赏金</string>
+    <string name="reward_received">赏金已领取</string>
 </resources>

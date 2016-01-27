@@ -32,16 +32,49 @@
     <application
         android:name="com.common.application.XYApplication"
         android:allowBackup="true"
+        android:allowTaskReparenting="false"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name="com.xingyun.login.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+        <activity
+            android:name="com.xingyun.main.LaunchActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.xingyun.main.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="xingyun.cn"
+                    android:pathPrefix="/openwith"
+                    android:scheme="xingyun" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xingyun.login.LoginActivity">
         </activity>
     </application>
 

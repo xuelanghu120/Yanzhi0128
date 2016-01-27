@@ -3,4 +3,122 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="white_2">#f4f4f4</color>
+    <color name="black">#333333</color>
+    <color name="gray">#cccccc</color>
+    <color name="gray_2">#bbbbbb</color>
+    <color name="red">#ea3a3a</color>
+    <color name="red_2">#ff3333</color>
+    <color name="red_3">#ff0000</color>
+    <color name="red_weibo_login_bg">#ff0033</color>
+    <color name="transparent">#00000000</color>
+    <color name="selectable_item_background_pressed_color">#e0a1c5df</color>
+    <color name="translucent">#00000000</color>
+
+    <!-- 聊天 -->
+    <color name="text_shadow_color">#666666</color>
+    <color name="text_shadow_color1">#4cFFFFFF</color>
+    <color name="chat_footer_attachment_item_name">#FFA0A0A0</color>
+    <color name="chat_footer_voice_btn_text">#FF2D2D2D</color>
+    <color name="group_session_name">#666666</color>
+    <color name="chat_send_pic_pressed_color">#e0000000</color>
+    <color name="chat_last_msg_color">#7d7d7d</color>
+    <color name="chat_top_chat_color">#f5f8fe</color>
+
+    <!-- 星云官方颜色   l:颜色淡    m:中间色  h:颜色重 -->
+    <color name="xy_blue_l">#0099ff</color>
+    <color name="xy_blue">#0099ff</color>
+    <color name="xy_blue_h">#006699</color>
+    <color name="xy_blue_press">#0089D5</color>
+
+    <color name="xy_black">#333333</color>
+    <color name="xy_white">#ffffff</color>
+    <color name="xy_gray_l">#cccccc</color>
+    <color name="xy_gray_m">#999999</color>
+    <color name="xy_gray_h">#666666</color>
+    <color name="xy_orange">#ff6600</color><!-- 约见报名按钮正常背景色 -->
+    <color name="xy_orange_l">#ff9900</color>
+    <color name="xy_eeeeee">#eeeeee</color>
+    <color name="xy_dddddd">#dddddd</color>
+    <!-- 星云官方背景颜色 -->
+    <color name="xy_gray_l_5">#e1e1e1</color>
+    <color name="xy_gray_l_4">#ececec</color>
+    <color name="xy_gray_l_3">#f6f6f6</color>
+    <color name="xy_gray_l_2">#efefef</color><!-- 约见已报名已结束背景色 -->
+    <color name="xy_bg_l">#efeff4</color>
+    <color name="xy_lanuch_bg">#0084b0</color>
+    <color name="xy_loading_default_color">#dbdbdb</color>
+    <color name="xy_weibo_verify_bg">#efefef</color>
+    <color name="xy_gray_text_color">#999999</color>
+
+    <!-- 约见 -->
+    <color name="wemeet_details_normal">#f8f8f8</color><!-- 约见详情按钮正常背景色 -->
+    <color name="wemeet_details_pressed">#dfdfdf</color><!-- 约见详情按钮按下背景色 -->
+    <color name="wemeet_apply_pressed">#e55c00</color><!-- 约见报名按钮按下背景色 -->
+
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="top_chat_item_bg_color">#edf7fe</color>
+    <color name="chat_attachment_bg">#efefef</color>
+
+    <!-- 选择照片选中颜色 -->
+    <color name="none_color">#00000000</color>
+    <color name="blue_overlay">#660D92DD</color>
+
+    <color name="xy_common_bg">#f9f9f9</color>
+    <color name="time_line_visitor_comment_layout_bg">#ebebeb</color>
+
+    <color name="forward_dynamic_solid_bg">#f1f1f1</color>
+    <color name="forward_dynamic_stroke_bg">#ebebeb</color>
+
+    <color name="heder_color_bg">#0099ff</color>
+    <color name="heder_color_bg_for_xiaomi">#0099ff</color>
+
+    <color name="publish_line_bg">#e7e7e7</color>
+
+    <color name="xy_green">#669900</color>
+    <color name="xy_green_l">#99cc00</color>
+    <color name="emoticon_bg_color">#ffffffff</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+
+    <!-- 选择相册 -->
+    <color name="choose_photo_default_gray">#a6d0e4</color>
+
+    <!-- 新评论背景颜色 -->
+    <color name="new_comment_bg_normal">#484848</color>
+    <color name="new_comment_bg_pressed">#383737</color>
+
+    <!-- 新详情评论标题背景颜色 -->
+    <color name="new_comment_bg">#70aa00</color>
+    <color name="hot_comment_bg">#ff6666</color>
+
+
+    <color name="xy_yellow">#0099ff</color>
+    <color name="xy_yellow_hl">#2aaaff</color>
+    <color name="xy_btn_yellow">#DAC34F</color>
+
+    <color name="zan_btn_bg_color">#f6f6f6</color>
+    <color name="zan_btn_bg_color_press">#E0E0E0</color>
+
+    <!-- 同城界面颜色值 -->
+
+    <color name="city_title_btn_normal_color">#0099ff</color>
+
+    <!-- 2.6.0 新建颜色声明 -->
+
+    <color name="circular_progress_default_progress">#bada55</color>
+    <color name="circular_progress_default_background">#ffffff</color>
+
+    <color name="tab_indicator_pressed">#efefef</color>
+
+    <!--微信支付颜色  -->
+
+    <color name="commen_bg">#ebebeb</color>
+    <color name="commen_up">#ffffff</color>
+    <color name="commen_blue">#006699</color>
 </resources>
