@@ -58,7 +58,6 @@ public class LoginDataCenterManager {
             @Override
             public void call(RspRegist o) {
                 if(o.isSuccess){
-                    result = o.result;
                 }
             }
         });
@@ -71,16 +70,14 @@ public class LoginDataCenterManager {
      * @param callback
      * @return
      */
-    public Observable registVerication(ReqRegistVerification param,final NetworkCallback callback){
+    public void registVerication(ReqRegistVerification param,final NetworkCallback callback){
         LoginNetManager.reqRegistVerificationParamObservable(param,callback).subscribe(new Action1<RspRegist>() {
             @Override
             public void call(RspRegist o) {
                 if(o.isSuccess){
-                    result = o.result;
                 }
             }
         });
-        return result;
     }
 
     /**

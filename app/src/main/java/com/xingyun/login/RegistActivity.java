@@ -9,7 +9,6 @@ import com.common.base.activity.BaseActivity;
 import com.common.utils.ActivityUtil;
 import com.common.utils.DeviceInfo;
 import com.xingyun.login.manager.LoginDataCenterManager;
-import com.xingyun.login.reqparam.ReqRegistMobileExistParam;
 import com.xingyun.login.reqparam.ReqRegistVerification;
 import com.xingyun.main.R;
 
@@ -25,7 +24,6 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
 
     private EditText mRegisterMobile;
     private EditText mRegisterPassword;
-    private Button mBtnRegister;
     private String mobile,password;
 
     @Override
