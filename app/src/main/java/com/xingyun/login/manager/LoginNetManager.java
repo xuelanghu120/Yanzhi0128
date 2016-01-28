@@ -3,9 +3,11 @@ package com.xingyun.login.manager;
 import com.common.common.Global;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.reqparam.ReqRegistConfirmParam;
+import com.xingyun.login.mobile.ReqLoginParam;
 import com.xingyun.login.reqparam.ReqRegistMobileExistParam;
 import com.xingyun.login.reqparam.ReqRegistVerification;
 import com.xingyun.login.rsp.RspLogin;
+import com.xingyun.login.mobile.RspLogin;
 import com.xingyun.login.rsp.RspRegist;
 
 import main.mmwork.com.mmworklib.http.HttpWork;

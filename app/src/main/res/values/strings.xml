@@ -1096,4 +1096,17 @@
 
     <string name="reward_receive_reply">回复私信即得赏金</string>
     <string name="reward_received">赏金已领取</string>
+
+
+    <!-- 微信授权登陆相关 -->
+    <string name="auth_success">授权成功</string>
+    <string name="auth_denied">授权禁止</string>
+    <string name="auth_send_failure">授权发送失败</string>
+    <string name="auth_not_support">不支持授权功能</string>
+    <string name="auth_cancle">取消授权登录</string>
+    <string name="auth_json_null">返回json为null</string>
+    <string name="auth_json_parse_error">json解析错误</string>
+    <string name="login_ing">页面跳转中...</string>
+    <string name="str_default">---</string>
+    <string name="is_logout">是否退出登录</string>
 </resources>

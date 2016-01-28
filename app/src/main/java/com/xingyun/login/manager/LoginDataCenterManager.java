@@ -4,6 +4,8 @@ import android.databinding.Observable;
 import android.util.Log;
 
 import com.xingyun.login.model.entity.ResultData;
+import com.xingyun.login.mobile.ReqLoginParam;
+import com.xingyun.login.mobile.RspLogin;
 import com.xingyun.login.model.entity.User;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.reqparam.ReqRegistConfirmParam;
@@ -21,7 +23,6 @@ import rx.functions.Action1;
 public class LoginDataCenterManager {
     private volatile static LoginDataCenterManager instance;
     public User user;
-    public ResultData<Integer> result;
     public static LoginDataCenterManager getInstance(){
         if (instance==null){
             synchronized (LoginDataCenterManager.class){
@@ -33,13 +34,8 @@ public class LoginDataCenterManager {
         return instance;
     }
 
-    /**
-     * 登陆
-     * @param param
-     * @param callback
-     * @return
-     */
-    public Observable login(ReqLoginParam param, final NetworkCallback callback){
+
+    public User login(ReqLoginParam param, final NetworkCallback callback){
         LoginNetManager.reqLogin(param, false, callback).subscribe(new Action1<RspLogin>() {
             @Override
             public void call(RspLogin o) {

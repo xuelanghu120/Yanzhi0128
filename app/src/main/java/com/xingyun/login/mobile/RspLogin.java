@@ -1,4 +1,4 @@
-package com.xingyun.login.rsp;
+package com.xingyun.login.mobile;
 
 import com.common.http.YanzhiAbstractResponser;
 import com.google.gson.Gson;

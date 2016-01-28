@@ -4,23 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text_telephone"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="输入手机号"
-        android:textSize="24sp"/>
-    <TextView
-        android:id="@+id/text_pwd"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="输入密码"
-        android:textSize="24sp"/>
+
     <Button
         android:id="@+id/btn_telephone_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登陆"/>
+        android:text="手机登陆"/>
+    <Button
+        android:id="@+id/btn_weixin_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信登陆"/>
 
     <Button
         android:id="@+id/btn_regist"
