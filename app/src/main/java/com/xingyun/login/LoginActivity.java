@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.common.base.activity.BaseActivity;
+import com.common.utils.ActivityUtil;
 import com.common.utils.DeviceInfo;
 import com.common.utils.Logger;
 import com.xingyun.login.model.entity.User;
@@ -32,6 +33,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         findViewById(R.id.btn_telephone_login).setOnClickListener(this);
         textViewTelephone = (TextView) findViewById(R.id.text_telephone);
         textViewPwd = (TextView) findViewById(R.id.text_pwd);
+        findViewById(R.id.btn_regist).setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +49,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 param.expires = "";
                 DeviceInfo.Init(LoginActivity.this, LoginActivity.this);
                 LoginDataCenterManager.getInstance().login(param, LoginActivity.this);
+                break;
+            case R.id.btn_regist:
+                ActivityUtil.toActivity(this,RegistActivity.class);
                 break;
         }
     }

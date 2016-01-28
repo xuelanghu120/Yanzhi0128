@@ -4,25 +4,14 @@
 package com.xingyun.login.model.entity;
 
 
+import android.databinding.BaseObservable;
+
 /**
  * 结果数据
  * @author ShimonXin
  * @created 2013-3-14
  * 
  */
-public class ResultData<T> {
-	private T result;
-
-	public ResultData(T result) {
-		super();
-		this.result = result;
-	}
-
-	public T getResult() {
-		return result;
-	}
-
-	public void setResult(T result) {
-		this.result = result;
-	}
+public class ResultData<T> extends BaseObservable {
+	public T result;
 }
