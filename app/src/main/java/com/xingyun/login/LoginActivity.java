@@ -3,22 +3,23 @@ package com.xingyun.login;
 
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.common.base.activity.BaseActivity;
+import com.common.common.Global;
 import com.common.utils.ActivityUtil;
 import com.common.utils.DeviceInfo;
 import com.common.utils.Logger;
-import com.xingyun.login.mobile.ReqLoginParam;
-import com.xingyun.login.mobile.RspLogin;
+import com.xingyun.login.controller.LoginController;
+import com.xingyun.login.reqparam.ReqLoginParam;
+import com.xingyun.login.rsp.RspLogin;
 import com.xingyun.login.manager.LoginDataCenterManager;
 import com.xingyun.login.model.entity.User;
-import com.xingyun.login.wxlogin.LoginController;
-import com.xingyun.login.wxlogin.listener.ILoginListener;
-import com.xingyun.login.wxlogin.util.WXUtils;
+import com.xingyun.login.listener.ILoginListener;
+import com.xingyun.login.utils.WXUtils;
 import com.xingyun.main.R;
 
+import main.mmwork.com.mmworklib.http.HttpWork;
 import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
 
 /**
@@ -64,6 +65,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     @Override
     protected void onDestroy() {
         LoginController.getInstance().unRegistListener(mListener);
+        HttpWork.getInstace(Global.getContext()).cancel(this);//this为callback
         super.onDestroy();
     }
 
@@ -105,7 +107,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
         @Override
         public void onLoginError(int errorCode) {
-            String str = WXUtils.getErroStr(LoginActivity.this,errorCode);
+            String str = WXUtils.getErroStr(LoginActivity.this, errorCode);
             if (!TextUtils.isEmpty(str)) {
                 Toast.makeText(LoginActivity.this,str,Toast.LENGTH_SHORT).show();
             }

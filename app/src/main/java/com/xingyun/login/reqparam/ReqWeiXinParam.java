@@ -1,4 +1,4 @@
-package com.xingyun.login.wxlogin;
+package com.xingyun.login.reqparam;
 
 
 import com.common.common.XYConstant;

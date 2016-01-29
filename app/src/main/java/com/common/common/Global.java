@@ -17,6 +17,7 @@ public class Global {
     private static Handler uiHandler;
     //application上下文
     public static Context mContext;
+    public static boolean isPageFont = false;
 
     static{
         HandlerThread mThread = new HandlerThread("Global");
@@ -56,6 +57,10 @@ public class Global {
      */
     public static final void postRunnable2UI(Runnable r){
         uiHandler.post(r);
+    }
+
+    public static final void postRunnable2UIAttime(Runnable r,long time){
+        uiHandler.postDelayed(r,time);
     }
 
     public void removeRunnale(Runnable r){

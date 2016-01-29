@@ -1,8 +1,8 @@
 package com.xingyun.login.manager;
 
 import android.databinding.Observable;
-import com.xingyun.login.mobile.ReqLoginParam;
-import com.xingyun.login.mobile.RspLogin;
+import com.xingyun.login.reqparam.ReqLoginParam;
+import com.xingyun.login.rsp.RspLogin;
 import com.xingyun.login.model.entity.User;
 import com.xingyun.login.rsp.RspRegistMobileExist;
 import com.xingyun.login.rsp.RspRegistVerification;

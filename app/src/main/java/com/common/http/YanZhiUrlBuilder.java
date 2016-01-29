@@ -7,7 +7,7 @@ import com.common.http.base.AppClient;
 import com.common.utils.DeviceInfo;
 import com.common.utils.MD5Util;
 import com.common.utils.SpUtil;
-import com.xingyun.login.wxlogin.cache.UserCache;
+import com.xingyun.login.cache.UserCache;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

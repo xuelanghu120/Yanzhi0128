@@ -1,4 +1,4 @@
-package com.xingyun.login.mobile;
+package com.xingyun.login.reqparam;
 
 import com.common.common.ApiDefinition;
 import com.common.common.XYConfig;

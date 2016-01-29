@@ -1,4 +1,4 @@
-package com.xingyun.login.wxlogin.cache;
+package com.xingyun.login.cache;
 
 import com.xingyun.login.model.entity.User;
 

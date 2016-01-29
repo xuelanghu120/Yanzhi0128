@@ -1,4 +1,4 @@
-package com.xingyun.login.wxlogin.entity;
+package com.xingyun.login.model;
 
 import android.databinding.BaseObservable;
 
