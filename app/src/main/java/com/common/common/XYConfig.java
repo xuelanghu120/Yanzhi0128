@@ -42,6 +42,8 @@ public class XYConfig {
     public static final String PLATFORM = "android";
     public static final String REQUESTFORMAT = "json";
     public static final String PREFERENCES_NAME = "XY_REFERENCE";
+    public static final String SP_LOGIN = "SP_LOGIN";//sp保存登陆相关的东东，文件名称
+
     public static final String USER_ID_KEY = "userId_key";
     public static final String DB_DELETE = "DB_DELETE";
 

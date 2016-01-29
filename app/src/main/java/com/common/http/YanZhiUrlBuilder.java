@@ -2,12 +2,12 @@ package com.common.http;
 
 import android.text.TextUtils;
 
-import com.alibaba.fastjson.JSON;
 import com.common.common.XYConfig;
-import com.common.http.base.ApiRequest;
 import com.common.http.base.AppClient;
 import com.common.utils.DeviceInfo;
 import com.common.utils.MD5Util;
+import com.common.utils.SpUtil;
+import com.xingyun.login.wxlogin.cache.UserCache;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -23,14 +23,14 @@ import main.mmwork.com.mmworklib.http.builder.URLBuilder;
 public class YanZhiUrlBuilder implements URLBuilder {
     private String url;
     private Map<String, Object> paramsMap;
-    private ApiRequest<ParamEntity> apiReq;
     private Map<String,String> clietMap;
     private Map<String,String> entityMap;
 
     //    DefaultURLBuilder
     private String getToken() {
-        //// TODO: 2016/1/25
-        return null;
+        String token =null;
+        token = UserCache.user==null? SpUtil.getToken():null;
+        return token;
     }
 
     @Override
@@ -69,8 +69,6 @@ public class YanZhiUrlBuilder implements URLBuilder {
 
     //基础参数加
     public void addCommonParams(Map<String, Object> tempParams) {
-        apiReq = new ApiRequest<ParamEntity>();
-
         AppClient client = new AppClient();
         client.model = DeviceInfo.GetModelAndFactor();
         clietMap.put("model",client.model);
@@ -82,43 +80,32 @@ public class YanZhiUrlBuilder implements URLBuilder {
         clietMap.put("screen",client.screen);
         client.mac = DeviceInfo.MACADDRESS;
         clietMap.put("mac",client.mac);
-        apiReq.setClient(client);
         paramsMap.put("client", clietMap);
 
         String appSystem=XYConfig.PLATFORM;
-        apiReq.setAppSystem(appSystem);
         paramsMap.put("appSystem", appSystem);
         String appVersion=XYConfig.VERSION;
-        apiReq.setAppVersion(appVersion);
         paramsMap.put("appVersion", appVersion);
         String format= XYConfig.REQUESTFORMAT;
-        apiReq.setFormat(format);
         paramsMap.put("format", format);
 
 
         String token = getToken();
         if (!TextUtils.isEmpty(token)) {
-            apiReq.setToken(token);
             paramsMap.put("token", token);
             String callid = String.valueOf(System.currentTimeMillis());
-            apiReq.setCallid(callid);
             paramsMap.put("callid", callid);
             String v = MD5Util.md5(callid + token + XYConfig.API_SECRET);
-            apiReq.setV(v);
             paramsMap.put("v", v);
         }
-
+//一下参数暂时不用
 //        String plus =XYConfig.XINGYUN_PLUS;
-//        apiReq.setPlus(plus);
 //        paramsMap.put("plus", plus);
 //        String ent = XYConfig.XINGYUN_PLUS;
-//        apiReq.setEnt(ent);
 //        paramsMap.put("ent", ent);
 //        String channel= ChannelUtil.getChannelCode(Global.mContext);
-//        apiReq.setChannel(channel);
 //        paramsMap.put("channel", channel);
 
-        String reqStr = JSON.toJSONString(apiReq);
     }
 }
 

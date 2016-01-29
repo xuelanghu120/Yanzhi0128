@@ -151,7 +151,8 @@ public class LoginController implements NetworkCallback<RspLogin> {
     public void onSucessed(RspLogin rsp) {
         User user = rsp.user;
         if (null==user){
-
+            onLoginResult(false, LoginController.ERRORCODE_JSON_PARSE_ERROR, null);
+            Logger.d(TAG, "[dotask]" + "user为null" + "微信登陆失败");
         }else {
             onLoginResult(true, 0, rsp);
             Logger.d(TAG, "[dotask]" + rsp.user.toString() + "微信登陆成功");
@@ -161,6 +162,7 @@ public class LoginController implements NetworkCallback<RspLogin> {
 
     @Override
     public void onFilled(int code, String msg) {
-
+        Logger.d(TAG, "[dotask]" + "[code]"+code+"[msg]"+msg+"微信登陆失败");
+        LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_ERR_SENT_FAILED, null);
     }
 }

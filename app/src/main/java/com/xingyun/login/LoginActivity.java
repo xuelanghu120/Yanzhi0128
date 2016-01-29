@@ -75,19 +75,21 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     public void onSucessed(RspLogin rsp) {
         User user = rsp.user;
         if (null==user){
-
+            LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_JSON_PARSE_ERROR, null);
         }else {
-
+            LoginController.getInstance().onLoginResult(true, 0, rsp);
         }
         Logger.d("LoginActivity",rsp.user.toString()+"===================");
     }
 
     @Override
     public void onFilled(int code, String msg) {
-
+        LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_ERR_SENT_FAILED, null);
     }
 
     /**
+     * 手机登陆在onSucessed做操作
+     * 其他登陆成功是监听通知，在mListener操作
      * 微信登陆结果通知过来
      */
     private ILoginListener mListener = new ILoginListener() {
