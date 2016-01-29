@@ -9,13 +9,11 @@ import org.json.JSONObject;
 /**
  * Created by 黄笠 on 2016/1/27.
  */
-public class RspRegist extends YanzhiAbstractResponser {
+public class RspRegistVerification extends YanzhiAbstractResponser {
 
-//    public ResultData<Integer> result;
 
     @Override
     public void parserResult(JSONObject jsonObject, Gson gson) {
-//        result = gson.fromJson(jsonObject.toString(),result.getClass());
     }
 
     @Override

@@ -4,10 +4,8 @@ import android.databinding.Observable;
 import com.xingyun.login.mobile.ReqLoginParam;
 import com.xingyun.login.mobile.RspLogin;
 import com.xingyun.login.model.entity.User;
-import com.xingyun.login.reqparam.ReqRegistConfirmParam;
-import com.xingyun.login.reqparam.ReqRegistMobileExistParam;
-import com.xingyun.login.reqparam.ReqRegistVerification;
-import com.xingyun.login.rsp.RspRegist;
+import com.xingyun.login.rsp.RspRegistMobileExist;
+import com.xingyun.login.rsp.RspRegistVerification;
 
 import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
 import rx.functions.Action1;
@@ -44,15 +42,15 @@ public class LoginDataCenterManager {
 
     /**
      *  手机号是否存在
-     * @param param
      * @param callback
      * @return
      */
-    public Observable registMobileExist(ReqRegistMobileExistParam param,final NetworkCallback callback){
-        LoginNetManager.reqRegistMobileExistParamObservable(param,callback).subscribe(new Action1<RspRegist>() {
+    public Observable registMobileExist(String mobile,final NetworkCallback callback){
+        LoginNetManager.reqRegistMobileExistParamObservable(mobile,callback).subscribe(new Action1<RspRegistMobileExist>() {
             @Override
-            public void call(RspRegist o) {
+            public void call(RspRegistMobileExist o) {
                 if(o.isSuccess){
+                   int i =  o.result.result;
                 }
             }
         });
@@ -61,14 +59,13 @@ public class LoginDataCenterManager {
 
     /**
      * 发送验证码
-     * @param param
      * @param callback
      * @return
      */
-    public void registVerication(ReqRegistVerification param,final NetworkCallback callback){
-        LoginNetManager.reqRegistVerificationParamObservable(param,callback).subscribe(new Action1<RspRegist>() {
+    public void registVerication(String mobile,String password,final NetworkCallback callback){
+        LoginNetManager.reqRegistVerificationParamObservable(mobile,password,callback).subscribe(new Action1<RspRegistVerification>() {
             @Override
-            public void call(RspRegist o) {
+            public void call(RspRegistVerification o) {
                 if(o.isSuccess){
                 }
             }
@@ -77,12 +74,11 @@ public class LoginDataCenterManager {
 
     /**
      * 确认验证码手机号
-     * @param param
      * @param callback
      * @return
      */
-    public Observable registConfirm(ReqRegistConfirmParam param,final NetworkCallback callback){
-        LoginNetManager.reqRegistConfirm(param,callback).subscribe(new Action1<RspLogin>() {
+    public Observable registConfirm(String mobile,String code,final NetworkCallback callback){
+        LoginNetManager.reqRegistConfirm(mobile,code,callback).subscribe(new Action1<RspLogin>() {
             @Override
             public void call(RspLogin o) {
                 if(o.isSuccess){

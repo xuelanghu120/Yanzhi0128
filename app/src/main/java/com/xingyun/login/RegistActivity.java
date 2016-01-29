@@ -3,21 +3,23 @@ package com.xingyun.login;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.common.base.activity.BaseActivity;
 import com.common.utils.ActivityUtil;
 import com.common.utils.DeviceInfo;
+import com.common.utils.Logger;
 import com.xingyun.login.manager.LoginDataCenterManager;
-import com.xingyun.login.reqparam.ReqRegistVerification;
+import com.xingyun.login.rsp.RspRegistMobileExist;
+import com.xingyun.login.rsp.RspRegistVerification;
 import com.xingyun.main.R;
 
 import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
-import main.mmwork.com.mmworklib.http.responser.AbstractResponser;
 
 /**
  * Created by 黄笠 on 2016/1/26.
  */
-public class RegistActivity extends BaseActivity implements View.OnClickListener,NetworkCallback{
+public class RegistActivity extends BaseActivity implements View.OnClickListener{
 
     public static final String TAG = RegistActivity.class.getSimpleName();
 
@@ -43,24 +45,40 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             case R.id.btn_regist:
                 mobile = mRegisterMobile.getText().toString().trim();
                 password = mRegisterPassword.getText().toString().trim();
-                ReqRegistVerification param = new ReqRegistVerification();
-                param.mobile = mobile;
-                param.password = password;
                 DeviceInfo.Init(RegistActivity.this, RegistActivity.this);
-                LoginDataCenterManager.getInstance().registVerication(param,this);
+                LoginDataCenterManager.getInstance().registMobileExist(mobile,mobileExistNetworkCallback);
                 break;
         }
     }
 
-    @Override
-    public void onSucessed(AbstractResponser rsp) {
-        Bundle bundle = new Bundle();
-        bundle.putString("mobile",mobile);
-        ActivityUtil.toActivity(this,VerificationActivity.class,bundle);
-    }
+    private NetworkCallback<RspRegistMobileExist> mobileExistNetworkCallback = new NetworkCallback<RspRegistMobileExist>() {
+        @Override
+        public void onSucessed(RspRegistMobileExist rsp) {
+            if(rsp.result.result == 0){
+                LoginDataCenterManager.getInstance().registVerication(mobile,password,verificationNetworkCallback);
+            }else{
+                Toast.makeText(RegistActivity.this,"手机号已存在",Toast.LENGTH_SHORT).show();
+            }
+        }
 
-    @Override
-    public void onFilled(int code, String msg) {
+        @Override
+        public void onFilled(int code, String msg) {
+            Logger.d(TAG,code + msg);
+        }
+    };
 
-    }
+    private NetworkCallback<RspRegistVerification> verificationNetworkCallback = new NetworkCallback<RspRegistVerification>() {
+        @Override
+        public void onSucessed(RspRegistVerification rsp) {
+            Bundle bundle = new Bundle();
+            bundle.putString("mobile",mobile);
+            ActivityUtil.toActivity(RegistActivity.this,VerificationActivity.class,bundle);
+        }
+
+        @Override
+        public void onFilled(int code, String msg) {
+
+        }
+    };
+
 }
