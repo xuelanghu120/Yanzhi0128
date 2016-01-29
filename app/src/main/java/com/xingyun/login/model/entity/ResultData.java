@@ -12,6 +12,6 @@ import android.databinding.BaseObservable;
  * @created 2013-3-14
  * 
  */
-public class ResultData<T> extends BaseObservable {
-	public T result;
+public class ResultData extends BaseObservable {
+	public Integer result;
 }

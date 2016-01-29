@@ -50,7 +50,7 @@ public class LoginDataCenterManager {
             @Override
             public void call(RspRegistMobileExist o) {
                 if(o.isSuccess){
-                   int i =  o.result.result;
+//                   int i =  o.result.result;
                 }
             }
         });

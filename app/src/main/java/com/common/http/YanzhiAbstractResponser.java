@@ -56,13 +56,11 @@ public abstract class YanzhiAbstractResponser extends AbstractResponser {
                         RspBaseDataEntity baseEntity2 = new RspBaseDataEntity();
                         int code2 = jsonObj2.getInt("code");
                         baseEntity2.code = code2;
-                        String desc2 = jsonObj1.getString("desc");
+                        String desc2 = jsonObj2.getString("desc");
                         baseEntity2.desc = desc2;
-                        if (code == 0) {
-                            if (jsonObj2.has("data")) {
-                                JSONObject jsonObj3 = jsonObj2.getJSONObject("data");
-                                return jsonObj3;
-                            }
+                        if (jsonObj2.has("data")) {
+                            JSONObject jsonObj3 = jsonObj2.getJSONObject("data");
+                            return jsonObj3;
                         }
                     }
                 }
