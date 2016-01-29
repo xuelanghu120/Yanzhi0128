@@ -33,3 +33,7 @@
 -keepclassmembers class * {
    public <init> (org.json.JSONObject);
 }
+#微信
+-keep class com.tencent.mm.sdk.** {
+   *;
+}
