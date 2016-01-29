@@ -41,8 +41,6 @@
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.xingyun.main.TestActivity"></activity>
-
         <activity
             android:name="com.xingyun.main.LaunchActivity"
             android:label="@string/app_name"
@@ -89,11 +87,15 @@
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoDisplay" />
 
         <activity android:name="com.xingyun.login.RegistActivity"></activity>
 
         <activity android:name="com.xingyun.login.VerificationActivity"></activity>
+        <!-- 添加UmengAppkey -->
+        <meta-data android:value="534ccc2f56240b2ff5136b17" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="${UMENG_CHANNEL_VALUE}" android:name="UMENG_CHANNEL"/>
     </application>
 
 </manifest>
