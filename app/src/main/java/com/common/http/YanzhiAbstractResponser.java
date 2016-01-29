@@ -46,8 +46,10 @@ public abstract class YanzhiAbstractResponser extends AbstractResponser {
                 baseEntity1.code = code;
                 String desc = jsonObj1.getString("desc");
                 baseEntity1.desc = desc;
-                String token = jsonObj1.getString("token");
-                baseEntity1.token = token;
+                if (jsonObj1.has("token")){
+                    String token = jsonObj1.getString("token");
+                    baseEntity1.token = token;
+                }
                 if (code == 0) {
                     JSONObject jsonObj2 = jsonObj1.getJSONObject("data");
                     if (jsonObj2 != null) {
