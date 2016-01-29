@@ -1,4 +1,4 @@
-package com.xingyun.login.wxlogin;
+package com.xingyun.login.controller;
 
 import android.content.Context;
 
@@ -9,12 +9,12 @@ import com.common.utils.SpUtil;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.xingyun.login.mobile.ReqLoginParam;
-import com.xingyun.login.mobile.RspLogin;
+import com.xingyun.login.reqparam.ReqLoginParam;
+import com.xingyun.login.rsp.RspLogin;
 import com.xingyun.login.model.entity.User;
-import com.xingyun.login.wxlogin.cache.UserCache;
-import com.xingyun.login.wxlogin.entity.PWeChatEntity;
-import com.xingyun.login.wxlogin.listener.ILoginListener;
+import com.xingyun.login.cache.UserCache;
+import com.xingyun.login.model.PWeChatEntity;
+import com.xingyun.login.listener.ILoginListener;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

@@ -2,12 +2,11 @@ package com.xingyun.login;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.common.base.activity.BaseActivity;
 import com.common.utils.Logger;
 import com.xingyun.login.manager.LoginDataCenterManager;
-import com.xingyun.login.mobile.RspLogin;
+import com.xingyun.login.rsp.RspLogin;
 import com.xingyun.login.model.entity.User;
 import com.xingyun.main.R;
 

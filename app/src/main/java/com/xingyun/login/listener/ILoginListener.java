@@ -1,7 +1,7 @@
-package com.xingyun.login.wxlogin.listener;
+package com.xingyun.login.listener;
 
 
-import com.xingyun.login.mobile.RspLogin;
+import com.xingyun.login.rsp.RspLogin;
 
 public interface ILoginListener {
 	
