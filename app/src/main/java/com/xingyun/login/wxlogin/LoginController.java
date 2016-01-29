@@ -3,6 +3,7 @@ package com.xingyun.login.wxlogin;
 import android.content.Context;
 
 import com.common.common.XYConstant;
+import com.common.utils.FileUtils;
 import com.common.utils.Logger;
 import com.common.utils.SpUtil;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
@@ -114,6 +115,7 @@ public class LoginController implements NetworkCallback<RspLogin> {
         if (succ) {
             initCache(rsp.user);
             initSp(rsp.user);
+            FileUtils.saveFile(rsp.user.token,"token");
             this.mRsp = rsp;
         }
         for (ILoginListener listener : mSet) {
@@ -138,6 +140,7 @@ public class LoginController implements NetworkCallback<RspLogin> {
         clearMyReq();
         UserCache.clean();
         SpUtil.clearLoginInfo();
+        FileUtils.deleteFile("token");
         Logger.d(TAG, "[onLoginOut]" + "weixin登陆退出");
     }
 
