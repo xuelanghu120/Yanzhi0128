@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.xingyun.main"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="23" />
@@ -11,6 +11,7 @@
         android:normalScreens="true"
         android:resizeable="true"
         android:smallScreens="false" />
+
 
     <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /><!-- 可能是华为修改了权限  -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -41,6 +42,18 @@
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
 
+        <!-- 添加UmengAppkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="534ccc2f56240b2ff5136b17" >
+        </meta-data>
+        <!-- 渠道名 默认官方渠道：official -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="10000" />
+
+        <activity android:name="com.xingyun.main.TestActivity"></activity>
+
         <activity
             android:name="com.xingyun.main.LaunchActivity"
             android:label="@string/app_name"
@@ -49,8 +62,8 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
 
         </activity>
@@ -87,15 +100,26 @@
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoDisplay" />
 
         <activity android:name="com.xingyun.login.RegistActivity"></activity>
 
         <activity android:name="com.xingyun.login.VerificationActivity"></activity>
-        <!-- 添加UmengAppkey -->
-        <meta-data android:value="534ccc2f56240b2ff5136b17" android:name="UMENG_APPKEY"/>
-        <meta-data android:value="${UMENG_CHANNEL_VALUE}" android:name="UMENG_CHANNEL"/>
+
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>

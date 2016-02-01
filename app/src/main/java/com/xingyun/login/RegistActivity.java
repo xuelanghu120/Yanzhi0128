@@ -81,4 +81,6 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
         }
     };
 
+
+
 }

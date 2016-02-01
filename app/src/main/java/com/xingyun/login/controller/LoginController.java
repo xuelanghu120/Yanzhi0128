@@ -9,16 +9,18 @@ import com.common.utils.SpUtil;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.xingyun.login.cache.UserCache;
+import com.xingyun.login.listener.ILoginListener;
+import com.xingyun.login.model.PWeChatEntity;
+import com.xingyun.login.model.entity.User;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.rsp.RspLogin;
-import com.xingyun.login.model.entity.User;
-import com.xingyun.login.cache.UserCache;
-import com.xingyun.login.model.PWeChatEntity;
-import com.xingyun.login.listener.ILoginListener;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
 
 /***
@@ -32,6 +34,8 @@ public class LoginController implements NetworkCallback<RspLogin> {
     private IWXAPI api = null;
     private List<Integer> mReqList;
     private Set<ILoginListener> mSet;
+
+
 
     public static final int ERRORCODE_AUTH_DENIED = 10;    		//授权禁止
     public static final int ERRORCODE_ERR_SENT_FAILED = 11;    //发送失败
@@ -160,12 +164,13 @@ public class LoginController implements NetworkCallback<RspLogin> {
             onLoginResult(true, 0, rsp);
             Logger.d(TAG, "[dotask]" + rsp.user.toString() + "微信登陆成功");
         }
-
     }
 
     @Override
     public void onFilled(int code, String msg) {
-        Logger.d(TAG, "[dotask]" + "[code]"+code+"[msg]"+msg+"微信登陆失败");
+        Logger.d(TAG, "[dotask]" + "[code]" + code + "[msg]" + msg + "微信登陆失败");
         LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_ERR_SENT_FAILED, null);
     }
+
+
 }
