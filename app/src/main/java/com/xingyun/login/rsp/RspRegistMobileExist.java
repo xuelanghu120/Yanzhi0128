@@ -15,6 +15,6 @@ public class RspRegistMobileExist extends YanzhiAbstractResponser {
 
     @Override
     public void parserResult(JSONObject jsonObject, Gson gson) {
-        result = gson.fromJson(jsonObject.toString(),result.getClass());
+        result = gson.fromJson(jsonObject.toString(),ResultData.class);
     }
 }
