@@ -7,5 +7,5 @@ package com.common.http.base;
 public class RspBaseEntity {
     public int code;
     public String desc;
-    public String token;
+//    public String token;
 }

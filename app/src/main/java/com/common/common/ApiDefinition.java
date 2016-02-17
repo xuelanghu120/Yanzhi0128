@@ -19,4 +19,7 @@ public class ApiDefinition {
     public static final String URL_REGIST_MOBILE_EXIST = "/mobileExist.api";
     // 发送验证码
     public static final String URL_REGIST_VERIFICATION = "/register.api";
+
+    /** 登陆 **/
+    public static final String URL_RECOMM = "/index/recomm.api";
 }

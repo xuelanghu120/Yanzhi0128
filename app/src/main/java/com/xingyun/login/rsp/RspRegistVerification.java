@@ -12,8 +12,13 @@ import org.json.JSONObject;
 public class RspRegistVerification extends YanzhiAbstractResponser {
 
 
+//    @Override
+//    public void parserResult(JSONObject jsonObject, Gson gson) {
+//    }
+
     @Override
-    public void parserResult(JSONObject jsonObject, Gson gson) {
+    public void parserResult(int code, JSONObject jsonObject, Gson gson) {
+
     }
 
     @Override

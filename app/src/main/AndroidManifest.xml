@@ -12,7 +12,6 @@
         android:resizeable="true"
         android:smallScreens="false" />
 
-
     <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /><!-- 可能是华为修改了权限  -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -40,7 +39,7 @@
         android:supportsRtl="true"
         android:largeHeap="true"
         android:screenOrientation="portrait"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppHoloLightTheme">
 
         <!-- 添加UmengAppkey -->
         <meta-data
@@ -51,9 +50,15 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="10000" />
-
-        <activity android:name="com.xingyun.main.TestActivity"></activity>
-
+        <!--测试页面,写完以后进行合并-->
+        <activity android:name="com.xingyun.main.TestActivity"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>>
+        </activity>
+        <!--启动页面-->
         <activity
             android:name="com.xingyun.main.LaunchActivity"
             android:label="@string/app_name"
@@ -61,37 +66,29 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-
         </activity>
-
+        <!--主页面-->
         <activity
             android:name="com.xingyun.main.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@android:style/Theme.NoTitleBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
                     android:host="xingyun.cn"
                     android:pathPrefix="/openwith"
                     android:scheme="xingyun" />
             </intent-filter>
         </activity>
+        <!--登陆页面-->
+        <activity android:name="com.xingyun.login.LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar">
 
-        <activity android:name="com.xingyun.login.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 微信授权登陆 -->
@@ -102,9 +99,13 @@
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.NoDisplay" />
 
-        <activity android:name="com.xingyun.login.RegistActivity"></activity>
+        <activity android:name="com.xingyun.login.RegistActivity">
 
+        </activity>
+        <!--注册确认页面-->
         <activity android:name="com.xingyun.login.VerificationActivity"></activity>
+        <!--mainactivity的页面,但是跳转有问题,先暂时写功能,然后转过去-->
+        <activity android:name="com.xingyun.main_yanzhi.Main"></activity>
 
         <!-- 必须注册在微博授权，分享微博时候用到 -->
         <activity

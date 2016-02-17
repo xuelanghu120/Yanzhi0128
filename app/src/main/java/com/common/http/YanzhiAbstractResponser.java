@@ -21,13 +21,14 @@ import main.mmwork.com.mmworklib.http.responser.AbstractResponser;
  */
 public abstract class YanzhiAbstractResponser extends AbstractResponser {
 
-    public abstract void parserResult(JSONObject jsonObject, Gson gson);
+    public abstract void parserResult(int code,JSONObject jsonObject, Gson gson);
+    private int code =-1;
 
     @Override
     public void parserBody(String result) {
         Gson gson = new GsonBuilder().registerTypeAdapter(Date.class, new DateDeSerializer()).setDateFormat(DateFormat.LONG).create();
         JSONObject jsonObject = json2Obj(result);
-        parserResult(jsonObject, gson);
+        parserResult(code,jsonObject, gson);
     }
 
     @Override
@@ -37,7 +38,7 @@ public abstract class YanzhiAbstractResponser extends AbstractResponser {
 
     public JSONObject json2Obj(String result) {
         if (isSuccess && !TextUtils.isEmpty(result)) {
-            int code = -1;
+//            int code = -1;
             JSONObject jsonObj1 = null;
             try {
                 RspBaseEntity baseEntity1 = new RspBaseEntity();
@@ -48,22 +49,29 @@ public abstract class YanzhiAbstractResponser extends AbstractResponser {
                 baseEntity1.desc = desc;
                 if(jsonObj1.has("token")){
                     String token = jsonObj1.getString("token");
-                    baseEntity1.token = token;
+//                    baseEntity1.token = token;
                 }
                 if (code == 0) {
                     JSONObject jsonObj2 = jsonObj1.getJSONObject("data");
                     if (jsonObj2 != null) {
                         RspBaseDataEntity baseEntity2 = new RspBaseDataEntity();
-                        int code2 = jsonObj2.getInt("code");
-                        baseEntity2.code = code2;
-                        if(jsonObj2.has("desc")){
-                            baseEntity2.desc = jsonObj2.getString("desc");
+                        code = jsonObj2.getInt("code");
+                        if (code==0){
+                            baseEntity2.code = code;
+                            if(jsonObj2.has("desc")){
+                                baseEntity2.desc = jsonObj2.getString("desc");
+                            }
+                            if (jsonObj2.has("data")) {
+                                JSONObject jsonObj3 = jsonObj2.getJSONObject("data");
+                                return jsonObj3;
+                            }
+                        }else {
+                            return jsonObj2;
                         }
-                        if (jsonObj2.has("data")) {
-                            JSONObject jsonObj3 = jsonObj2.getJSONObject("data");
-                            return jsonObj3;
-                        }
+
                     }
+                }else {
+                    return jsonObj1;
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

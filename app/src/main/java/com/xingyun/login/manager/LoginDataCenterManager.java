@@ -28,7 +28,7 @@ public class LoginDataCenterManager {
     }
 
 
-    public User login(ReqLoginParam param, final NetworkCallback callback){
+    public Observable login(ReqLoginParam param, final NetworkCallback callback){
         LoginNetManager.reqLogin(param, false, callback).subscribe(new Action1<RspLogin>() {
             @Override
             public void call(RspLogin o) {

@@ -12,20 +12,13 @@ import com.umeng.analytics.MobclickAgent;
 /**
  * Created by 黄笠 on 2016/1/22.
  */
-public abstract class BaseActivity extends Activity{
-
+public abstract class BaseActivity extends Activity {
     public static final String TAG = "BaseActivity";
-
     protected Context context;
-
     protected abstract int getLayoutId();
-
     protected abstract void init();
-
     protected void initTitle(){}
-
     protected void initState(Bundle savedInstanceState){}
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

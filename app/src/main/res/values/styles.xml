@@ -1,11 +1,27 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    //主题修改了edittext样式和checkedbox样式
+    <style name="AppHoloLightTheme" parent="android:Theme.Holo.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:editTextStyle">@style/xy_edittext_style</item>
+        <item name="android:checkboxStyle">@style/CheckBoxAppTheme</item>
+  <!--      <item name="ptrHeaderStyle">@style/Widget.Custom.PtrHeader_Custom</item>-->
+    </style>
+
+    <style name="xy_edittext_style" parent="@android:style/Widget.Holo.Light.EditText">
+        <item name="android:background">@drawable/xy_edit_text_bg</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="CheckBoxAppTheme" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/apptheme_btn_check_holo_light</item>
     </style>
 
 </resources>

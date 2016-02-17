@@ -6,5 +6,5 @@ package com.common.http.base;
 public class RspBaseDataEntity {
 	public int code;
 	public String desc;
-	public boolean isSucc;
+//	public boolean isSucc;
 }

@@ -141,12 +141,22 @@ public class DeviceInfo {
 		return sdkStr;
 	}
 
+	/**
+	 * 获取mac地址
+	 * @param context
+	 * @return
+	 */
 	private static String getLocalMacAddress(Context context) {
 		WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 		WifiInfo info = wifi.getConnectionInfo();
 		return info.getMacAddress();
 	}
 
+	/**
+	 * 获取屏幕信息
+	 * @param activity
+	 * @return
+	 */
 	private static String getResolution(Activity activity) {
 		DisplayMetrics dm = new DisplayMetrics();
 		activity.getWindowManager().getDefaultDisplay().getMetrics(dm);

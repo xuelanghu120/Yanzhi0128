@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.multidex.MultiDexApplication;
 
 import com.common.common.Global;
+import com.xingyun.login.controller.LoginController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +30,15 @@ public class XYApplication extends MultiDexApplication {
         mApplication = this;
         Global.mContext =this.getApplicationContext();
         Global.init();
+        Global.postDelay(r);
         startServices();
     }
+    private Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            LoginController.getInstance().loadLoginInfo();//加载用户信息
+        }
+    };
 
     /**
      * 开启服务

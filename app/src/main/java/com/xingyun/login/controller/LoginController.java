@@ -1,7 +1,9 @@
 package com.xingyun.login.controller;
 
 import android.content.Context;
+import android.hardware.usb.UsbRequest;
 
+import com.alibaba.fastjson.JSON;
 import com.common.common.XYConstant;
 import com.common.utils.FileUtils;
 import com.common.utils.Logger;
@@ -15,6 +17,9 @@ import com.xingyun.login.model.PWeChatEntity;
 import com.xingyun.login.model.entity.User;
 import com.xingyun.login.reqparam.ReqLoginParam;
 import com.xingyun.login.rsp.RspLogin;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -34,6 +39,7 @@ public class LoginController implements NetworkCallback<RspLogin> {
     private IWXAPI api = null;
     private List<Integer> mReqList;
     private Set<ILoginListener> mSet;
+    private User user;
 
 
 
@@ -117,6 +123,7 @@ public class LoginController implements NetworkCallback<RspLogin> {
 
     public void onLoginResult(boolean succ, int errorCode, RspLogin rsp) {
         if (succ) {
+            user = rsp.user;
             initCache(rsp.user);
             initSp(rsp.user);
             FileUtils.saveFile(rsp.user.token,"token");
@@ -172,5 +179,26 @@ public class LoginController implements NetworkCallback<RspLogin> {
         LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_ERR_SENT_FAILED, null);
     }
 
+    public User getUser() {
+        if (user!=null){
+            return user;
+        }
+        return null;
+    }
 
+    public User loadLoginInfo(){
+        User userJson = null;
+        String loginJson = SpUtil.getLoginJson();
+        if (loginJson!=null && ""!=loginJson){
+            userJson = JSON.parseObject(loginJson ,User.class);
+            this.user = userJson;
+            Logger.d("loadLoginInfo","{loadLoginInfo}"+loginJson);
+        }
+        //缓存中添加user
+        if (UserCache.user==null && userJson!=null){
+            UserCache.user = userJson;
+            UserCache.token = userJson.token;
+        }
+        return userJson;
+    }
 }

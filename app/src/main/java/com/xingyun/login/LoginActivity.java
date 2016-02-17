@@ -1,14 +1,11 @@
 package com.xingyun.login;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.common.base.activity.BaseActivity;
@@ -22,13 +19,14 @@ import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.xingyun.login.controller.LoginController;
-import com.xingyun.login.reqparam.ReqLoginParam;
-import com.xingyun.login.rsp.RspLogin;
+import com.xingyun.login.listener.ILoginListener;
 import com.xingyun.login.manager.LoginDataCenterManager;
 import com.xingyun.login.model.entity.User;
-import com.xingyun.login.listener.ILoginListener;
+import com.xingyun.login.reqparam.ReqLoginParam;
+import com.xingyun.login.rsp.RspLogin;
 import com.xingyun.login.utils.WXUtils;
 import com.xingyun.main.R;
+import com.xingyun.main.databinding.ActivityLoginBinding;
 
 import main.mmwork.com.mmworklib.http.HttpWork;
 import main.mmwork.com.mmworklib.http.callback.NetworkCallback;
@@ -41,39 +39,47 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     @Override
     protected int getLayoutId() {
-        ViewDataBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_login);
+        ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+//        binding.setUser(LoginController.getInstance().getUser());
         return R.layout.activity_login;
     }
 
     @Override
     protected void init() {
         LoginController.getInstance().registListener(mListener);
-        findViewById(R.id.btn_telephone_login).setOnClickListener(this);
         findViewById(R.id.btn_weixin_login).setOnClickListener(this);
-        findViewById(R.id.btn_regist).setOnClickListener(this);
         findViewById(R.id.btn_weibo_login).setOnClickListener(this);
+        findViewById(R.id.btn_default_login).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_telephone_login:
-                ReqLoginParam param = new ReqLoginParam();
-                param.type = "mobile";
-                param.userid = "15075257640";
-                param.token = "123456";
-                param.expires = "";
-                DeviceInfo.Init(LoginActivity.this,LoginActivity.this);
-                LoginDataCenterManager.getInstance().login(param, moblieCallBack);
-                break;
-            case R.id.btn_regist:
-                ActivityUtil.toActivity(this, RegistActivity.class);
-                break;
+//            //手机登陆
+//            case R.id.btn_telephone_login:
+//                ReqLoginParam param = new ReqLoginParam();
+//                param.type = "mobile";
+//                param.userid = "15075257640";
+//                param.token = "123456";
+//                param.expires = "";
+//                DeviceInfo.Init(LoginActivity.this,LoginActivity.this);
+//                LoginDataCenterManager.getInstance().login(param, moblieCallBack);
+//                break;
+//            //注册
+//            case R.id.btn_regist:
+//                ActivityUtil.toActivity(this, RegistActivity.class);
+//                break;
+            //微信登陆
             case R.id.btn_weixin_login :
                 LoginController.getInstance().onWeChatLogin(LoginActivity.this);
                 break;
+            //微博登陆
             case R.id.btn_weibo_login:
                 onWeiBoLogin();
+                break;
+            //跳转到正常的登陆页面
+            case R.id.btn_default_login:
+
                 break;
         }
     }
@@ -97,6 +103,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_JSON_PARSE_ERROR, null);
             }else {
                 LoginController.getInstance().onLoginResult(true, 0, rsp);
+                Logger.d("LoginActivity", "moblieCallBack" + rsp.user.toString() + "==========手机登陆成功=========");
             }
             Logger.d("LoginActivity","moblieCallBack"+rsp.user.toString()+"===================");
         }
@@ -107,31 +114,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         }
 
     };
-
-    /**
-     * 微博登陆结果
-     * @param rsp
-     */
-    private NetworkCallback<RspLogin> weiboCallBack = new NetworkCallback<RspLogin>() {
-        @Override
-        public void onSucessed(RspLogin rsp) {
-            User user = rsp.user;
-            if (null==user){
-                LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_JSON_PARSE_ERROR, null);
-            }else {
-                LoginController.getInstance().onLoginResult(true, 0, rsp);
-            }
-            Logger.d("LoginActivity",rsp.user.toString()+"===================");
-        }
-
-        @Override
-        public void onFilled(int code, String msg) {
-            LoginController.getInstance().onLoginResult(false, LoginController.ERRORCODE_ERR_SENT_FAILED, null);
-        }
-
-    };
-
-
     /**
      * 手机登陆在onSucessed做操作
      * 其他登陆成功是监听通知，在mListener操作
@@ -140,7 +122,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private ILoginListener mListener = new ILoginListener() {
         @Override
         public void onLoginSucc(RspLogin rsp) {
-
+            //微信登陆成功的回调
         }
 
         @Override
@@ -183,7 +165,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 param.token = mAccessToken.getToken();
                 param.refreshToken = mAccessToken.getRefreshToken();
                 param.expires = mAccessToken.getExpiresTime()/1000+"";
-                com.xingyun.login.manager.LoginDataCenterManager.getInstance().login(param, moblieCallBack);
+                LoginDataCenterManager.getInstance().login(param, moblieCallBack);
             } else {
                 // 以下几种情况，您会收到 Code：
                 // 1. 当您未在平台上注册的应用程序的包名与签名时；
@@ -195,7 +177,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     message = message + "\nObtained the code: " + code;
                 }
                 Toast.makeText(LoginActivity.this, "",Toast.LENGTH_SHORT).show();
-                finish();
             }
         }
 
@@ -217,7 +198,5 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         if (mSsoHandler != null){
             mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
         }
-
     }
-
 }

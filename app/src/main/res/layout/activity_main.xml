@@ -12,11 +12,9 @@
         android:layout_height="@dimen/xingyun_bottom_bar_height_2"
         android:layout_alignParentBottom="true"
         android:orientation="vertical" >
-
         <include layout="@layout/layout_home_bottom_bar"/>
 
     </LinearLayout>
-
 
     <FrameLayout
         android:id="@+id/realtabcontent"
